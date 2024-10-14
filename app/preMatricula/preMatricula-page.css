@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.preMatricula {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.BlueBox {
+    width: 50%;
+    background: #0E4C8C;
+    color: #EAEAEA;
+}
+
+.BlueBox h1 {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    height: 100vh;
+    width: 17rem;
+    line-height: 2.5rem;
+}
+
+.Content {
+    margin: auto;
+}
+
+.Content h1 {
+    font-family: "Roboto", system-ui;
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 2rem;
+}   
+
+.Content .data p {
+    font-family: "Roboto", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    padding-bottom: .3rem;
+}
+
+.Content .data input {
+    width: 25rem;
+    height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+    margin-bottom: 6px;
+    padding: 0 10px 0 10px;
+}
+
+.sendButton {
+    width: 16rem;
+    height: 2.625rem;
+    background: #0E4C8C;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Roboto", system-ui;
+    font-size: 14px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px black;
+    margin-top: 2rem;
+    margin-left: 4.3rem;
+}
