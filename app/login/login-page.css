@@ -15,6 +15,7 @@
 
 .content {
     margin: auto;
+    grid-column: 2,3;
 }
 
 .content h1 {
