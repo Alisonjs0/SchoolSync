@@ -52,12 +52,13 @@
 }
 
 .info {
-    height: 450px;
+    height: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: #3489dd;
+    background: #0075CD;
     padding-top: 85px;
     color: white;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 64% 68%, 32% 68%, 0% 80%, 0 0);
 }
 
 .info h2 {
@@ -75,17 +76,22 @@
 }
 
 .carrossel {
-    height: 400px;
+    height: 500px;
     background: #269CCC;
-    display: flex;
-    margin-bottom: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6,1fr);
+    margin-top: -200px;
+    clip-path: polygon(37% 0, 100% 0, 100% 0, 100% 63%, 81% 69%, 32% 68%, 0 73%, 0 0);
+    gap: 20px;
 }
 
 .carrossel div {
-    background: #0E4C8C;
-    width: 400px;
+    background: #0075CD;
+    width: 350px;
     height: 200px;
-    margin: auto 60px;
+    grid-row: 2;
+    margin: auto;
 }
 
 .footer {
