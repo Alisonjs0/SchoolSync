@@ -10,7 +10,8 @@ const PaginaInicial = () => {
             </div>
             <main>
                 <div className={styles.banner}>
-                <button className={styles.matricula}>Faça sua pré-matricula</button>
+                    <img src="/assets/banner-inicial.jpg" alt="" />
+                    <button className={styles.matricula}>Faça sua pré-matricula</button>
                 </div>
                 <div className={`${styles.info} ${styles.container}`}>
                     <div className={`${styles.oneContent} ${styles.container}`}>
