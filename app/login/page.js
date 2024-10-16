@@ -1,6 +1,22 @@
+"use client";
+
+import { useState } from 'react';
 import "./login-page.css"
 
-const Login = () => {
+const LoginPage = () => {
+
+    const [usuario, setUsuario] = useState('');
+    const [senha, setSenha] = useState('');
+    const [lembrarSenha, setLembrarSenha] = useState(false);
+
+    function Login() {
+        if (usuario === "01704127" && senha === "89627123") {
+            alert('Senha correta')
+        } else {
+            alert('Senha incorreta')
+        }
+        
+    }
     return (
         <div className="Login">
             <div className="BlueBox"></div>
@@ -8,16 +24,24 @@ const Login = () => {
             <h1>Login</h1>
             <div className="data">
                 <p>Matricula/CPF<span>*</span></p>
-                <input type="text"/>
+                <input 
+                    id="Usuario" 
+                    type="number"
+                    value={usuario}
+                    onChange={(e) => setUsuario(e.target.value)}/>
                 <p>Senha<span>*</span></p>
-                <input type="text"/>
+                <input 
+                    id="Senha" 
+                    type="password"
+                    value={senha}
+                    onChange={(e) => setSenha(e.target.value)}/>
             </div>
             <div className="rememberPassword">
-                <input type="checkbox"/>
+                <input id="lembrarSenha" type="checkbox"/>
                 <p>Lembrar Senha</p>
             </div>
             <div className="loginButton">
-                <button>Login</button>
+                <button onClick={Login} id="loginButton">Login</button>
                 <a href="">Esqueceu a senha?</a>
             </div>
             </div>
@@ -25,4 +49,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default LoginPage

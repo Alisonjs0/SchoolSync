@@ -8,6 +8,7 @@ import { FaUserCircle } from "react-icons/fa";
 const dashboard_main = () => {
 
     function toggle() {
+        const burguer = document.getElementById("toggle")
         const menu = document.getElementsByClassName("menuLateral")[0];
         const menuSuperior = document.getElementsByClassName("menuSuperior")[0];
         const conteudoInteiro = document.getElementsByClassName("conteudo")[0]
@@ -15,14 +16,15 @@ const dashboard_main = () => {
             menu.classList.toggle('menuLateralInvisivel')
             menuSuperior.classList.toggle('menuSuperiorInteiro')
             conteudoInteiro.classList.toggle('conteudoInteiro')
-
+            burguer.classList.toggle("menuInteiro")
+            burguer.classList.toggle("burguer")
         }
 
     }
     return (
         <div className="page">
             <div className="menuSuperior">
-                <HiMenuAlt2 id="toggle" className="icon" onClick={toggle}/>
+                <HiMenuAlt2 id="toggle" className="icon  burguer" onClick={toggle}/>
                 <div className="menuUsuario">
                     <CiBellOn className="icon"/>
                     <FaUserCircle className="icon" />

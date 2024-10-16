@@ -27,7 +27,8 @@
 }
 
 .header .user {
-    height: 48px;
+    height: 52px;
+    margin-top: 15%;
 }
 
 .banner {
@@ -53,6 +54,16 @@
     font-size: 1rem;
     margin-top: 1rem;
     grid-area: 7 / 2 / 9 / 4;
+}
+
+.matricula button {
+    background: none;
+    border: none;
+    color: #fff;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
 }
 
 .info {
