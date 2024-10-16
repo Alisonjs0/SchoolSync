@@ -53,6 +53,12 @@
     align-items: center;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
 .content .rememberPassword input {
     width: .687rem;
     height: .687rem;
