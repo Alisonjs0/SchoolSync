@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import "./login-page.css"
 
 const LoginPage = () => {
 
+    const router = useRouter()
     const [usuario, setUsuario] = useState('');
     const [senha, setSenha] = useState('');
     const [lembrarSenha, setLembrarSenha] = useState(false);
@@ -12,6 +14,7 @@ const LoginPage = () => {
     function Login() {
         if (usuario === "01704127" && senha === "89627123") {
             alert('Senha correta')
+            router.push('/dashboard_main')
         } else {
             alert('Senha incorreta')
         }

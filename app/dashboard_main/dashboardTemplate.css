@@ -17,7 +17,7 @@
     background: #0E4C8C;
     z-index: 1;
     grid-area: 1 / 1 / 9 / 2;
-    transition: 1s ease;
+    transition: 0.5s ease;
 }
 
 .menuLateral img {
@@ -27,8 +27,9 @@
 
 }
 
+/*coisa azul*/
 .menuLateralInvisivel {
-    transition: 1s ease;
+    transition: 1.2s ease;
     transform: translateX(-500px);
 }
 
@@ -42,13 +43,19 @@
     text-align: center;
     align-items: center;
     padding: 0 2rem;
-    transition: 1s ease;
 }
 
 .menuSuperior .burguer {
-    margin-left: 18rem;
+   transform: translateX(18rem);
+    transition: .6s ease;
 }
 
+.menuSuperiorInteiro .burguerInteiro {
+    transform: translate(1rem);
+    transition: .8s ease;
+}
+
+/*Supeior inteiro*/
 .menuSuperiorInteiro {
     transition: all 1s ease;
     grid-area: 1 / 1 / 2 / 9;

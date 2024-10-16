@@ -17,7 +17,7 @@ const dashboard_main = () => {
             menuSuperior.classList.toggle('menuSuperiorInteiro')
             conteudoInteiro.classList.toggle('conteudoInteiro')
             burguer.classList.toggle("menuInteiro")
-            burguer.classList.toggle("burguer")
+            burguer.classList.toggle("burguerInteiro")
         }
 
     }
