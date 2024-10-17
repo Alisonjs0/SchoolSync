@@ -63,7 +63,7 @@
 
 .conteudoInteiro {
     transition: all 1s ease;
-    transform: translateX(-10%);
+    transform: translateX(-20%);
 }
 
 .menuSuperior .icon {
@@ -82,11 +82,13 @@
 
 .conteudo {
     grid-area: 2 / 2 / 9 / 9;
+    transition: .8s;
 }
 
 .conteudo h3 {
     padding: 40px;
     font-weight: 600;
+    transition: all 1s ease;
 }
 
 .conteudoMenus {

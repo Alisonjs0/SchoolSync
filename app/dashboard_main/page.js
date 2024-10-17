@@ -4,6 +4,7 @@ import "./dashboardTemplate.css"
 import { HiMenuAlt2 } from "react-icons/hi";
 import { CiBellOn } from "react-icons/ci";
 import { FaUserCircle } from "react-icons/fa";
+import { CiBellOff } from "react-icons/ci";
 
 const dashboard_main = () => {
 
@@ -12,6 +13,8 @@ const dashboard_main = () => {
         const menu = document.getElementsByClassName("menuLateral")[0];
         const menuSuperior = document.getElementsByClassName("menuSuperior")[0];
         const conteudoInteiro = document.getElementsByClassName("conteudo")[0]
+        const notificacao = document.getElementById("notificacao")
+
         if (menu) {
             menu.classList.toggle('menuLateralInvisivel')
             menuSuperior.classList.toggle('menuSuperiorInteiro')
@@ -26,7 +29,7 @@ const dashboard_main = () => {
             <div className="menuSuperior">
                 <HiMenuAlt2 id="toggle" className="icon  burguer" onClick={toggle}/>
                 <div className="menuUsuario">
-                    <CiBellOn className="icon"/>
+                    <CiBellOn id="notificacao" className="icon"/>
                     <FaUserCircle className="icon" />
                 </div>
             </div>
@@ -37,9 +40,7 @@ const dashboard_main = () => {
             <div className="conteudo">
                 <h3>Dashboard</h3>
                 <div className={`${"container"} ${"conteudoMenus"}`}>
-                    <div>.</div>
-                    <div></div>
-                    <div></div>
+                    
                 </div>
             </div>
         </div>
