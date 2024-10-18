@@ -1,6 +1,7 @@
 "use client"; // Para fazer o site rodar no cliente e manipular o DOM
 
 import "./dashboardTemplate.css" // Importação do CSS
+import PageMenus from "./conteudoMenus.js"
 
 import { useState } from "react"; // useState para atualização dos dados em tempo real na tela
 
@@ -13,11 +14,11 @@ import { CiBellOff } from "react-icons/ci";
 
 const dashboard_main = ({ isAluno }) => {
 
-    //! Teste de criação de usuario
     const user = {
         nome: 'Alison Jose Serafim de Lima',
         notas: [8,6,7,9],
-        media: 7.5
+        media: 7.5,
+        tipo: 'aluno'
     }
 
 
@@ -58,7 +59,7 @@ const dashboard_main = ({ isAluno }) => {
                 <div className="menuUsuario"> {/*  */}
                     <div id="notificacao" className={`notificacao ${notificacaoAtiva ? 'notificacaoOn' : ''}`} onClick={OnOff}>
                         {notificacaoAtiva ? (
-                            <CiBellOn className="icon sino on" />
+                            <CiBellOn className="icon sino on" /> 
                         ) : (
                             <CiBellOff className="icon sino off" />
                         )}
@@ -72,19 +73,11 @@ const dashboard_main = ({ isAluno }) => {
 
             <div className="conteudo">
                 <h3>Dashboard</h3>
-                <div className={`${"container"} ${"conteudoMenus"}`}>
-                    <div>
-                        
-                    </div>
-                    
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
-
-                </div>
+                {user.tipo === 'aluno' ? (
+                    <PageMenus/>
+                ) : (
+                    <h1>funciona</h1>
+                )}
             </div>
         </div>
     )
