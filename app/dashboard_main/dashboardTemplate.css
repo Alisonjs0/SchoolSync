@@ -124,13 +124,13 @@
     transition: all 1s ease;
 }
 
-.conteudoMenus {
+.conteudoMenus div {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 40px;
 }
 
-.conteudoMenus div {
+.conteudoMenus .menus  {
     width: 400px;
     height: 140px;
     background: #EAEAEA;
@@ -141,26 +141,70 @@
     font-style: normal;
 }
 
-.conteudoMenus div h2 {
-    padding-bottom: 32px;
+.conteudoMenus .menus h2 {
     font-weight: 600;
     font-size: 22px;
+    margin-bottom: 10%;
 }
 
-.conteudoMenus div p {
-    font-size: 14px;
+.conteudoMenus .menus p {
+    font-size: 13px;
+    margin-right: 10%;
 }
 
+.menuComicon h2 {
+    position: relative;
+}
+
+.menuComicon span {
+    color: #2F9C43;
+    font-size: 9px;
+    position: absolute;
+}
+
+.menuComicon {
+    position: relative;
+}
+
+.menuIcon {
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    width: 45px;
+    height: 45px;
+}
 
 .listaLateral {
     color: #B6CFD3;
-    margin: 16% 0 0 16%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
 }
 
 .listaLateral li {
     display: flex;
-    padding-bottom: 2rem;
-    align-items: center;
+}
+
+.listaLateral li a {
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center; 
+}
+
+.listaLateral li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    width: 0;
+    height: 1px;
+    background-color: #B6CFD3;
+    transition: width .4s ease;
+}
+
+.listaLateral li a:hover::after, 
+.listaLateral li.menus::after {
+    width: 100%;
 }
 
 .listaLateral li p {
@@ -172,4 +216,3 @@
     margin-right: .5rem;
     font-size: 32px;
 }
-
