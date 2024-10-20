@@ -13,7 +13,6 @@ const LoginPage = () => {
 
     function Login() {
         if (usuario === "01704127" && senha === "89627123") {
-            alert('Senha correta')
             router.push('/dashboard_main')
         } else {
             alert('Senha incorreta')

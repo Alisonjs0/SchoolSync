@@ -2,6 +2,7 @@
 
 import "./dashboardTemplate.css" // Importação do CSS
 import PageMenus from "./conteudoMenus.js"
+import ConteudoMenuLateral from "./conteudoMenuLateral";
 
 import { useState } from "react"; // useState para atualização dos dados em tempo real na tela
 
@@ -12,13 +13,14 @@ import { FaUserCircle } from "react-icons/fa";
 import { CiBellOff } from "react-icons/ci";
 
 
+
 const dashboard_main = ({ isAluno }) => {
 
     const user = {
         nome: 'Alison Jose Serafim de Lima',
         notas: [8,6,7,9],
         media: 7.5,
-        tipo: 'aluno'
+        tipo: 'admin'
     }
 
 
@@ -69,15 +71,12 @@ const dashboard_main = ({ isAluno }) => {
             </div>
             <div id="menuLateral" className="menuLateral">
                 <img src="/assets/logo.png" alt="" />
+                    <ConteudoMenuLateral/>
             </div>
 
             <div className="conteudo">
                 <h3>Dashboard</h3>
-                {user.tipo === 'aluno' ? (
-                    <PageMenus/>
-                ) : (
-                    <h1>funciona</h1>
-                )}
+                <PageMenus/>
             </div>
         </div>
     )

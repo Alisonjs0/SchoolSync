@@ -19,11 +19,12 @@
     z-index: 1;
     grid-area: 1 / 1 / 9 / 2;
     transition: .8s ease;
+    overflow-y: hidden;
 }
 
 .menuLateral img {
     display: flex;
-    height: 6rem;
+    height: 5rem;
     margin: 1rem auto;
 
 }
@@ -149,3 +150,26 @@
 .conteudoMenus div p {
     font-size: 14px;
 }
+
+
+.listaLateral {
+    color: #B6CFD3;
+    margin: 16% 0 0 16%;
+}
+
+.listaLateral li {
+    display: flex;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+.listaLateral li p {
+    padding-top: 1%;
+}
+
+
+.iconMenuLateral {
+    margin-right: .5rem;
+    font-size: 32px;
+}
+
