@@ -10,7 +10,7 @@
 }
 
 .BlueBox {
-    width: 50%;
+    width: 40%;
     background: #0E4C8C;
     color: #EAEAEA;
 }
@@ -26,29 +26,31 @@
 
 .Content {
     margin: auto;
+    padding: 2rem; /* Adicionando padding para melhor espaçamento */
 }
 
 .Content h1 {
     font-family: "Roboto", system-ui;
     font-weight: 700;
     font-style: normal;
-    padding-bottom: 2rem;
-}   
+    padding-bottom: 1rem;
+}
 
-.Content .data p {
+.Content .data label {
     font-family: "Roboto", system-ui;
     font-weight: 500;
     font-style: normal;
-    padding-bottom: .3rem;
+    display: block;
 }
 
-.Content .data input {
+.Content .data input,
+.Content .data select {
     width: 25rem;
     height: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.199);
     border-radius: 5px;
-    margin-bottom: 6px;
-    padding: 0 10px 0 10px;
+    margin-bottom: .7rem;
+    padding: 0 10px; /* Removendo o zero da esquerda */
 }
 
 .sendButton {
@@ -62,5 +64,16 @@
     border: 1px solid black;
     box-shadow: 2px 2px 4px black;
     margin-top: 2rem;
-    margin-left: 4.3rem;
+    margin-left: auto; /* Centralizando o botão */
+    margin-right: auto; /* Centralizando o botão */
+    display: block; /* Transformando o botão em bloco */
+}
+
+/* Adicionando estilo para a mensagem de feedback */
+.feedback {
+    color: #ff0000; /* Cor da mensagem de feedback */
+    margin-top: 1rem; /* Espaço acima da mensagem */
+    text-align: center; /* Centralizando o texto */
+    font-family: "Roboto", system-ui;
+    font-weight: 500;
 }
