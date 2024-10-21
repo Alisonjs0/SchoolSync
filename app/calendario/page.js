@@ -6,7 +6,7 @@ const Calendario = () => {
             <DashboardMain>
                 <div className={`${"container"} ${"conteudoMenus"}`}>
                     <h3>Calendario</h3>
-                    <div className='Calendario'>
+                    <div>
                         
                     </div>
                 </div>

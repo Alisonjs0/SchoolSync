@@ -1,7 +1,6 @@
 "use client"; // Para fazer o site rodar no cliente e manipular o DOM
 
 import "./dashboardTemplate.css" // Importação do CSS
-import PageMenus from "../dashboard/page.js"
 import ConteudoMenuLateral from "./conteudoMenuLateral";
 
 import Link from 'next/link'
@@ -16,13 +15,6 @@ import { CiBellOff } from "react-icons/ci";
 
 
 const dashboard_main = ({ children }) => {
-
-    const user = {
-        nome: 'Alison Jose Serafim de Lima',
-        notas: [8,6,7,9],
-        media: 7.5,
-        tipo: 'admin'
-    }
 
 
     // Função abrir e fechar o menu

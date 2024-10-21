@@ -14,7 +14,7 @@ const ConteudoMenuLateral = () => {
         nome: 'Alison Jose Serafim de Lima',
         notas: [8,6,7,9],
         media: 7.5,
-        tipo: 'admin'
+        tipo: 'aluno'
     }
 
   return (
@@ -44,7 +44,7 @@ const ConteudoMenuLateral = () => {
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><FaClock className="iconMenuLateral"/> <p>Horarios</p></a></li>
                             <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
-                            <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
+                            <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
                     ) : null}
 
