@@ -10,6 +10,7 @@ const PreMatricula = () => {
     const [opcaoSelecionada, setOpcaoSelecionada] = useState('');
     const [tel, setTel] = useState('');
     const [email, setEmail] = useState('');
+    const [emailValido, setEmailValido] = useState('')
     const [mensagem, setMensagem] = useState(''); // Para mensagens de feedback
 
     const handleChange = (event) => {
@@ -19,6 +20,46 @@ const PreMatricula = () => {
 
     const handleInputChange = (setter) => (event) => {
         setter(event.target.value);
+    };
+
+    const formatarCpf = (cpf) => {
+        // Remove todos os caracteres que não sejam números
+        cpf = cpf.replace(/\D/g, '');
+
+        // Aplica a formatação com pontos e hífen
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+        return cpf;
+    };
+
+    const handleCpfChange = (event) => {
+        const valor = event.target.value;
+        const cpfFormatado = formatarCpf(valor);
+        setCpf(cpfFormatado);
+    };
+
+    const formatarTelefone = (telefone) => {
+        // Remove todos os caracteres que não sejam números
+        telefone = telefone.replace(/\D/g, '');
+
+        // Aplica a formatação com parênteses, espaço e hífen
+        if (telefone.length > 10) {
+            telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})/, '($1) $2-$3'); // Formato (XX) XXXXX-XXXX
+        } else if (telefone.length > 5) {
+            telefone = telefone.replace(/^(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3'); // Formato (XX) XXXX-XXXX
+        } else if (telefone.length > 2) {
+            telefone = telefone.replace(/^(\d{2})(\d{0,5})/, '($1) $2'); // Formato parcial com DDD
+        }
+
+        return telefone;
+    };
+
+    const handleTelefoneChange = (event) => {
+        const valor = event.target.value;
+        const telefoneFormatado = formatarTelefone(valor);
+        setTel(telefoneFormatado);
     };
 
     const Enviar = () => {
@@ -68,7 +109,7 @@ const PreMatricula = () => {
                     <input type="text" id="nome" value={nome} onChange={handleInputChange(setNome)} />
                     
                     <label htmlFor="cpf">CPF:</label>
-                    <input type="text" id="cpf" value={cpf} maxLength="14" onChange={handleInputChange(setCpf)} />
+                    <input type="text" id="cpf" value={cpf} maxLength="14" onChange={handleCpfChange} />
                     
                     <label htmlFor="turma">Turma:</label>
                     <select id="turma" value={opcaoSelecionada} onChange={handleChange}>
@@ -82,7 +123,7 @@ const PreMatricula = () => {
                     </select>
                     
                     <label htmlFor="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" value={tel} onChange={handleInputChange(setTel)} />
+                    <input type="tel" id="telefone" value={tel} onChange={handleTelefoneChange} />
                     
                     <label htmlFor="email">E-mail:</label>
                     <input type="email" id="email" value={email} onChange={handleInputChange(setEmail)} />
