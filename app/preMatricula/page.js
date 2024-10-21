@@ -68,17 +68,17 @@ const PreMatricula = () => {
                     <input type="text" id="nome" value={nome} onChange={handleInputChange(setNome)} />
                     
                     <label htmlFor="cpf">CPF:</label>
-                    <input type="text" id="cpf" value={cpf} onChange={handleInputChange(setCpf)} />
+                    <input type="text" id="cpf" value={cpf} maxLength="14" onChange={handleInputChange(setCpf)} />
                     
                     <label htmlFor="turma">Turma:</label>
                     <select id="turma" value={opcaoSelecionada} onChange={handleChange}>
                         <option value="">Selecione</option>
-                        <option value="1a">Turma 1°A</option>
-                        <option value="1b">Turma 1°B</option>
-                        <option value="2a">Turma 2°A</option>
-                        <option value="2b">Turma 2°B</option>
-                        <option value="3a">Turma 3°A</option>
-                        <option value="3b">Turma 3°B</option>
+                        <option value="1°A">Turma 1°A</option>
+                        <option value="1°B">Turma 1°B</option>
+                        <option value="2°A">Turma 2°A</option>
+                        <option value="2°B">Turma 2°B</option>
+                        <option value="3°A">Turma 3°A</option>
+                        <option value="3°B">Turma 3°B</option>
                     </select>
                     
                     <label htmlFor="telefone">Telefone:</label>
