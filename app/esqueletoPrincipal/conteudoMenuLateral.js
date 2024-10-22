@@ -28,7 +28,7 @@ const ConteudoMenuLateral = () => {
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><IoPeople className="iconMenuLateral" /> <p>Gestão de turmas</p></a></li>
                             <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
-                            <li><a href=""><FaTools className="iconMenuLateral" /> <p>Configurações</p></a></li>
+                            <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
                     ) : user.tipo === "admin" ? (
                         <div>
