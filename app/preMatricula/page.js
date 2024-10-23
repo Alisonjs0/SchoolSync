@@ -62,7 +62,7 @@ const PreMatricula = () => {
         setTel(telefoneFormatado);
     };
 
-    const Enviar = () => {
+/*    const Enviar = () => {
         // Validações simples
         if (!nome || !cpf || !opcaoSelecionada || !tel || !email) {
             setMensagem('Por favor, preencha todos os campos.');
@@ -94,6 +94,7 @@ const PreMatricula = () => {
         });
 
     };
+*/
 
     
 
@@ -128,7 +129,7 @@ const PreMatricula = () => {
                     <label htmlFor="email">E-mail:</label>
                     <input type="email" id="email" value={email} onChange={handleInputChange(setEmail)} />
                 </div>
-                <button className="sendButton" onClick={Enviar}>Enviar</button>
+                <button className="sendButton">Enviar</button>
                 
                 {/* Mensagem de feedback */}
                 {mensagem && <p className="feedback">{mensagem}</p>}
