@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import emailjs from 'emailjs-com'
 import './preMatricula-page.css';
 
 const PreMatricula = () => {
