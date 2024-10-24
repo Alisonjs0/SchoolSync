@@ -1,4 +1,5 @@
 import EsqueletoPrincipal from '../esqueletoPrincipal/page.js'
+import "contato-suporte.css"
 
 const ContatoSuporte = () => {
     return (
