@@ -73,7 +73,6 @@ input[type=number]::-webkit-inner-spin-button,
 .loginButton {
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
     margin-top: 2rem;
 }
 
@@ -93,12 +92,4 @@ input[type=number]::-webkit-inner-spin-button,
     background: #0c3a69;
     transform: scale(1.05);
     transition: .5s;
-}
-
-.loginButton a {
-    font-family: "Roboto", system-ui;
-    font-weight: 500;
-    font-size: 10px;
-    margin-left: 5.625rem;
-    margin-top: .5rem;
 }
