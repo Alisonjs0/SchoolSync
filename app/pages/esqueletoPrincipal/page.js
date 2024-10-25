@@ -68,7 +68,7 @@ const dashboard_main = ({ children }) => {
             </div>
 
             <div className="conteudo">
-                {children}  
+                {children} 
             </div>
         </div>
     )
