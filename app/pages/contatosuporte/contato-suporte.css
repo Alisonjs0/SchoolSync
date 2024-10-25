@@ -77,7 +77,7 @@ input{
 
 ::placeholder{
     font-size: large;
-    color: black;
+    color: gray;
     font-family: "Roboto", system-ui;
     padding-left: 5%;
 }
