@@ -10,11 +10,11 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     font-family: "Roboto", system-ui;
-    height: 100vh;
 }
 
 .menuLateral {
-    height: 100%;
+    min-height: 100vh;
+    overflow: auto;
     width: 20vw;
     background: #0E4C8C;
     z-index: 1;
@@ -41,6 +41,7 @@
     box-shadow: -2px 1px 8px 2px rgb(141, 141, 141);
     z-index: 0;
     grid-area: 1 / 1 / 2 / 9;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     text-align: center;
