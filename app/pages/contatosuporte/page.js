@@ -28,7 +28,7 @@ const ContatoSuporte = () => {
                     placeholder='Sua mensagem'
                 />
             <div className="loginButton">
-                <button id="loginButton">Login</button>
+                <button id="loginButton">Enviar</button>
             </div>
             </div>
         </EsqueletoPrincipal>
