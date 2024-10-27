@@ -1,0 +1,94 @@
+.container .conteudo {
+    box-shadow: 0px 4px 4px 0px #0000003b;
+    border-radius: 0 0 10px 10px;
+}
+
+.conteudo {
+    height: fit-content;
+    padding-bottom: 80px;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-top: 5%;
+}
+
+#forms > *:not(a) {
+    width: 50%;
+    height: 40px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    padding: 0 20px;
+}
+
+/* Contêiner personalizado para o select */
+/* Container personalizado para o select */
+.select-container {
+    position: relative;
+    width: 50%;               /* Define a largura desejada */
+    height: 40px;              /* Define a altura desejada */
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    box-sizing: border-box;    /* Inclui o padding e a borda no tamanho total */
+}
+
+/* Ajuste do select para ocupar 100% do contêiner */
+.select-container select {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;              /* Remove a borda para evitar duplicação */
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 13px;           /* Ajuste de tamanho da fonte, se necessário */
+    outline: none;
+    color: #4f4f4fe3;
+}
+
+.select-container option {
+    border: none;  /* Mantém sem borda ao focar */
+    outline: none; /* Garante que não aparece contorno ao focar */
+    background: var(--background);
+}
+
+/* Seta customizada */
+.select-container::after {
+    content: '⏷';
+    position: absolute;
+    right: 20px;               /* Espaço da seta até a borda */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: #4f4f4fe3;
+}
+
+
+.conteudo a {
+    width: 30%;
+    height: 48px;
+    background: #0E4C8C;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    margin-top: 1.5rem;
+}
+
+.conteudo a button {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #EAEAEA;
+    cursor: pointer;
+}

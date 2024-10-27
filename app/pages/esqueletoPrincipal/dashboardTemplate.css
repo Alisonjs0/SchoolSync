@@ -41,7 +41,7 @@
     box-shadow: -2px 1px 8px 2px rgb(141, 141, 141);
     z-index: 0;
     grid-area: 1 / 1 / 2 / 9;
-    height: 80%;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     text-align: center;
