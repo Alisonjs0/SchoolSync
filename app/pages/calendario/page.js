@@ -1,4 +1,4 @@
-import DashboardMain from '../esqueletoPrincipal/page.js'
+import DashboardMain from '../esqueletoPrincipal/page.jsx'
 
 const Calendario = () => {
     return (
