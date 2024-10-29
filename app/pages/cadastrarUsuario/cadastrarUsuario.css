@@ -81,6 +81,7 @@
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.199);
     margin-top: 1.5rem;
+    box-shadow: 2px 2px 4px black;
 }
 
 .conteudo a button {
@@ -91,6 +92,7 @@
     font-size: 16px;
     color: #EAEAEA;
     cursor: pointer;
+
 }
 
 /* Remove as setas do input para navegadores Webkit (Chrome, Safari, Opera) */
