@@ -1,6 +1,6 @@
 "use client";
 
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.js";
+import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
 import "./cadastrarUsuario.css";
 import { useState } from "react";
 
