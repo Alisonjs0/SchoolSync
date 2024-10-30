@@ -1,0 +1,92 @@
+.conteudoMenus{
+    align-self: center;
+    position: relative;
+    width: 70%;
+    background: #EAEAEA;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px #0000003b;
+    height: 100%;
+  
+} 
+
+ .ctn-sub-menus{
+    display: grid;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: black;
+ }
+
+ /* .linha-vertical {
+    color: black;
+    height: 500px;
+    border-left: 2px solid;
+} */
+
+ label{
+    margin-top: 3%;
+    color: black;
+    display: grid;
+    font-family: "Roboto", system-ui;
+ }
+
+.label-input{
+    font-family: "Roboto", system-ui;
+    width: 50vw;
+    height: 6vh;
+    border: none;
+    background-color: #D8D8D8;    
+    border-radius: 0.5rem;
+}
+
+input{
+    color: black;
+    font-family: "Roboto", system-ui;
+    font-size: medium;
+}
+
+.email-warning{
+    margin-top: 3%;
+    background-color: #CCCCCC;
+    color: black;
+    width: 50vw;
+    height: 8vh;
+    border: none;
+    display: grid;
+}
+
+h3{
+    color: black;
+}
+.cfm{
+    color: blue;
+}
+
+#SaveButton{
+    width: 10rem;
+    height: 2.625rem;
+    background: #0E4C8C;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Roboto", system-ui;
+    font-size: 16px;
+    border: none;
+    box-shadow: 2px 2px 4px black;
+}
+
+#CancelButton{
+    width: 10rem;
+    height: 2.625rem;
+    background: #fff;
+    color:black;
+    border-radius: 5px;
+    font-family: "Roboto", system-ui;
+    font-size: 16px;
+    border: none;
+    box-shadow: 2px 2px 4px black;
+}
+
+.Button button:hover {
+    background: #0c3a69;
+    transform: scale(1.05);
+    transition: .5s;
+}
