@@ -16,7 +16,7 @@ const BoletimEscolar = () => {
     {
       nome: "Matematica",
       n1: 8,
-      n2: 7,
+      n2: 9,
       n3: 8,
       n4: 7,
       f1: 3,
@@ -26,7 +26,7 @@ const BoletimEscolar = () => {
     },
     {
       nome: "Portugues",
-      n1: 8,
+      n1: 10,
       n2: 7,
       n3: 8,
       n4: 5,
@@ -137,7 +137,8 @@ const BoletimEscolar = () => {
             <table className="forms">
               <thead>
                 <tr>
-                  <th>Matéria</th>
+                  <th>
+                  </th>
                   <th>1º Bim</th>
                   <th>Faltas</th>
                   <th>2º Bim</th>

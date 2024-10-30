@@ -7,6 +7,7 @@ import { FaComments } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { FaUserPlus } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa6";
 
 const ConteudoMenuLateral = () => {
 
@@ -43,6 +44,7 @@ const ConteudoMenuLateral = () => {
                             <li><a href=""><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><FaClock className="iconMenuLateral"/> <p>Horarios</p></a></li>
+                            <li><a href=""><FaBookOpen className="iconMenuLateral" /> <p>Boletim escolar</p></a></li>
                             <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
                             <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>

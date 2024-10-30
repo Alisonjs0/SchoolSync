@@ -10,6 +10,7 @@ const LoginPage = () => {
     const [usuario, setUsuario] = useState('');
     const [senha, setSenha] = useState('');
     const [lembrarSenha, setLembrarSenha] = useState(false);
+    console.log(usuario)
 
 
     function Login() {

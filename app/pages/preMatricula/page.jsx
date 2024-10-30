@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import './preMatricula-page.css';
+import emailjs from 'emailjs-com'
 
 const PreMatricula = () => {
     const [nome, setNome] = useState('');

@@ -1,8 +1,10 @@
 "use client";
 
+
 import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
 import "./cadastrarUsuario.css";
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const CadastrarUsuario = () => {
   const [nome, setNome] = useState("");
@@ -12,6 +14,7 @@ const CadastrarUsuario = () => {
   const [cpf, setCpf] = useState("")
   const [senha, setSenha] = useState("");
   const [confirmSenha, setConfirmSenha] = useState("");
+  const [cargo, setCargo] = useState()
 
   const formatarTelefone = (telefone) => {
     // Remove todos os caracteres que não sejam números
@@ -35,7 +38,9 @@ const CadastrarUsuario = () => {
     setTel(telefoneFormatado);
   };
 
-  console.log(nome, email)
+  const nextPage = () => {
+
+  }
 
   return (
     <div>
@@ -90,7 +95,7 @@ const CadastrarUsuario = () => {
                 </select>
               </div>
               <a href="">
-                <button className="button">Cadastrar Usuario</button>
+                <button className="button" onClick={nextPage}>Cadastrar Usuario</button>
               </a>
             </form>
           </div>
