@@ -1,23 +1,19 @@
 import "./dashboardTemplate.css"
 
+import { user as initialUserData } from '../data/infos';
+
+import { useState } from 'react'
+
 import { MdDashboard } from "react-icons/md";
-import { IoCalendar } from "react-icons/io5";
-import { IoPeople } from "react-icons/io5";
-import { FaComments } from "react-icons/fa";
+import { IoCalendar, IoPeople } from "react-icons/io5";
+import { FaComments, FaClock } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-import { FaUserPlus } from "react-icons/fa6";
-import { FaClock } from "react-icons/fa";
-import { FaBookOpen } from "react-icons/fa6";
+import { FaUserPlus, FaBookOpen } from "react-icons/fa6";
 
 const ConteudoMenuLateral = () => {
 
-    const user = {
-        nome: 'Alison Jose Serafim de Lima',
-        notas: [8,6,7,9],
-        media: 7.5,
-        tipo: 'admin'
-    }
-
+    const [user, setUser] = useState(initialUserData)
+    
   return (
     <div>
         <div id="menuLateral" className="menuLateral">

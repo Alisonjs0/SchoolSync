@@ -3,7 +3,6 @@
 import "./dashboardTemplate.css" // Importação do CSS
 import ConteudoMenuLateral from "./conteudoMenuLateral";
 
-import Link from 'next/link'
 import { useState } from "react"; // useState para atualização dos dados em tempo real na tela
 
 // Importação dos icons
