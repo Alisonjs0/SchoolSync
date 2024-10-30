@@ -6,12 +6,12 @@ const PaginaInicial = () => {
         <div className={styles.paginaInicial}>
             <div className={`${styles.header} ${styles.container}`}>
                 <img className={styles.img} src="/assets/logo.png" alt="logo" />
-                <a href="./login"><img className={styles.user} src="/assets/user.png" alt="" /></a>
+                <a href="./pages/login"><img className={styles.user} src="/assets/user.png" alt="" /></a>
             </div>
             <main>
                 <div className={styles.banner}>
                     <img src="/assets/banner-inicial.jpg" alt="" />
-                    <a className={styles.matricula} href="./preMatricula"><button>Faça sua pré-matricula</button></a>
+                    <a className={styles.matricula} href="./pages/preMatricula"><button>Faça sua pré-matricula</button></a>
                 </div>
                 <div className={`${styles.info} ${styles.container}`}>
                     <div className={`${styles.oneContent} ${styles.container}`}>

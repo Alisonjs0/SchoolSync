@@ -1,7 +1,7 @@
 import '../esqueletoPrincipal/dashboardTemplate.css'
 import './menus.css'
 
-import EsqueletoPrincipal from '../esqueletoPrincipal/page.js'
+import EsqueletoPrincipal from '../esqueletoPrincipal/page.jsx'
 
 import { IoAnalytics } from "react-icons/io5";
 
