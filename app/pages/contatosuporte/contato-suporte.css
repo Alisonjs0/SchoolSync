@@ -84,8 +84,7 @@ input{
 
 .loginButton {
     display: flex;
-    flex-direction: column;
-    margin-left: 13.5rem;
+    justify-content: center;
     margin-top: 1.5rem;
 }
 
