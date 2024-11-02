@@ -21,7 +21,7 @@ const ConteudoMenuLateral = () => {
                 <ul className="listaLateral">
                     {user.tipo === "professor" ? (
                         <div>
-                            <li><a href=""><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
+                            <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><IoPeople className="iconMenuLateral" /> <p>Gestão de turmas</p></a></li>
                             <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
@@ -29,7 +29,7 @@ const ConteudoMenuLateral = () => {
                         </div>
                     ) : user.tipo === "admin" ? (
                         <div>
-                            <li><a href=""><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
+                            <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><FaUserPlus className="iconMenuLateral"/> <p>Cadastrar Usuario</p></a></li>
                             <li><a href=""><IoPeople className="iconMenuLateral" /> <p>Gestão de turmas</p></a></li>
@@ -37,10 +37,10 @@ const ConteudoMenuLateral = () => {
                         </div>
                     ) : user.tipo === "aluno" ? (
                         <div>
-                            <li><a href=""><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
+                            <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
                             <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
-                            <li><a href=""><FaClock className="iconMenuLateral"/> <p>Horarios</p></a></li>
-                            <li><a href=""><FaBookOpen className="iconMenuLateral" /> <p>Boletim escolar</p></a></li>
+                            <li><a href="./horarios"><FaClock className="iconMenuLateral"/> <p>Horarios</p></a></li>
+                            <li><a href="./boletimEscolar"><FaBookOpen className="iconMenuLateral" /> <p>Boletim escolar</p></a></li>
                             <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
                             <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
