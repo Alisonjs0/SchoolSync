@@ -1,10 +1,10 @@
-import EsqueletoPrincipal from '../esqueletoPrincipal/page.js'
+import EsqueletoPrincipal from '../esqueletoPrincipal/page.jsx'
 import "./configuracoesGeral.css"
 
 const ConfiguracoesGeral = () => {
     return (
         <EsqueletoPrincipal>
-            <div className="container conteudoMenus">
+            <div className="conteiner conteudoMenus">
                 <h3>Configurações</h3>
 
                 <div className='ctn-sub-menus'>

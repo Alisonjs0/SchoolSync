@@ -9,7 +9,7 @@ const Horarios = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className={`${"container"} ${"conteudoMenus"}`}>
+        <div className={`${"conteiner"} ${"conteudoMenus"}`}>
           <h3>Horarios:</h3>
           <div className="horarios">
             <table className="horariosTabela">

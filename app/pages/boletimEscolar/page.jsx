@@ -101,7 +101,7 @@ const BoletimEscolar = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className="container conteudoMenus">
+        <div className="conteiner conteudoMenus">
           <h3>Boletim Escolar</h3>
           <div className="conteudo">
             <header className="cabecalho">

@@ -109,7 +109,7 @@
     display: block; /* Mostra o sino inativo se notificacaoOn não estiver presente */
 }
 
-.container {
+.conteiner {
     padding: 0 100px;
 }
 
