@@ -1,56 +1,72 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import "./login-page.css"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { IoMdHome } from "react-icons/io";
+import "./login-page.css";
 
 const LoginPage = () => {
+  const router = useRouter();
+  const [usuario, setUsuario] = useState("");
+  const [senha, setSenha] = useState("");
+  const [lembrarSenha, setLembrarSenha] = useState(false);
+  console.log(usuario);
 
-    const router = useRouter()
-    const [usuario, setUsuario] = useState('');
-    const [senha, setSenha] = useState('');
-    const [lembrarSenha, setLembrarSenha] = useState(false);
-    console.log(usuario)
-
-
-    function Login() {
-        if (usuario === "01704127" && senha === "89627123") {
-            router.push('/pages/dashboard')
-        } else {
-            alert('Senha incorreta')
-        }
-        
+  function Login() {
+    if (usuario === "01704127" && senha === "89627123") {
+      router.push("/pages/dashboard");
+    } else {
+      alert("Senha incorreta");
     }
-    return (
-        <div className="Login">
-            <div className="BlueBox"></div>
-            <div className="content">
-            <h1>Login</h1>
-            <div className="data">
-                <p>Matricula/CPF<span>*</span></p>
-                <input 
-                    id="Usuario" 
-                    type="number"
-                    value={usuario}
-                    onChange={(e) => setUsuario(e.target.value)}/>
-                <p>Senha<span>*</span></p>
-                <input 
-                    id="Senha" 
-                    type="password"
-                    value={senha}
-                    onChange={(e) => setSenha(e.target.value)}/>
-            </div>
-            <div className="rememberPassword">
-                <input id="lembrarSenha" type="checkbox"/>
-                <p>Lembrar Senha</p>
-            </div>
-            <div className="loginButton">
-                <button onClick={Login} id="loginButton">Login</button>
-                <a href="">Esqueceu a senha?</a>
-            </div>
-            </div>
+  }
+  return (
+    <div className="Login">
+      <div className="BlueBox">
+        <div className="home">
+          <a href="../">
+            <IoMdHome className="icon"/><p>Home</p>
+          </a>
         </div>
-    )
-}
+      </div>
+      <div className="conteudo">
+        <h1>Login</h1>
+        <div className="data">
+          <label htmlFor="">
+            <p>
+              Matricula/CPF<span>*</span>
+            </p>
+            <input
+              id="Usuario"
+              type="number"
+              value={usuario}
+              onChange={(e) => setUsuario(e.target.value)}
+            />
+          </label>
+          <label htmlFor="">
+            <p>
+              Senha<span>*</span>
+            </p>
+            <input
+              id="Senha"
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="rememberPassword">
+          <input id="lembrarSenha" type="checkbox" />
+          <p>Lembrar Senha</p>
+        </div>
+        <div className="loginButton">
+          <button onClick={Login} id="loginButton">
+            Login
+          </button>
+          <a href="">Esqueceu a senha?</a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default LoginPage
+export default LoginPage;
