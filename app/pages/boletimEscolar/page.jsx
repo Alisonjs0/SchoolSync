@@ -137,8 +137,7 @@ const BoletimEscolar = () => {
             <table className="forms">
               <thead>
                 <tr>
-                  <th>
-                  </th>
+                  <th></th>
                   <th>1º Bim</th>
                   <th>Faltas</th>
                   <th>2º Bim</th>
