@@ -23,6 +23,7 @@
     height: 75vh;
     padding: 5%;
     margin-left: 10%;
+    margin-top: 3%;
 }
 
 .label-input{
@@ -85,7 +86,7 @@ input{
 .loginButton {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .loginButton button {
