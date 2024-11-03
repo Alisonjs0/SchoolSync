@@ -13,6 +13,7 @@
     width: 40%;
     background: #0E4C8C;
     color: #EAEAEA;
+    position: relative;
 }
 
 .BlueBox h1 {
@@ -22,6 +23,18 @@
     height: 100vh;
     width: 17rem;
     line-height: 2.5rem;
+}
+
+.BlueBox .home .icon {
+    font-size: 24px;
+}
+
+.BlueBox .home a {
+    display: flex;
+    color: #eaeaea;
+    margin: 1.5rem;
+    gap: 8px;
+    position: absolute
 }
 
 .Content {

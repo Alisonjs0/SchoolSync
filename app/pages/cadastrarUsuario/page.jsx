@@ -16,7 +16,7 @@ const CadastrarUsuario = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className="container conteudoMenus">
+        <div className="conteiner conteudoMenus">
           <h3>Cadastrar Alunos</h3>
           <div className="conteudo">
             <FormAluno></FormAluno>

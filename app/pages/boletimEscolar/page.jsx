@@ -101,7 +101,7 @@ const BoletimEscolar = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className="container conteudoMenus">
+        <div className="conteiner conteudoMenus">
           <h3>Boletim Escolar</h3>
           <div className="conteudo">
             <header className="cabecalho">
@@ -137,8 +137,7 @@ const BoletimEscolar = () => {
             <table className="forms">
               <thead>
                 <tr>
-                  <th>
-                  </th>
+                  <th></th>
                   <th>1º Bim</th>
                   <th>Faltas</th>
                   <th>2º Bim</th>

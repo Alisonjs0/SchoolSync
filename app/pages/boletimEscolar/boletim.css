@@ -9,7 +9,7 @@
     color: #333;
   }
 
-  .container .conteudo {
+  .conteiner .conteudo {
     box-shadow: 0px 4px 4px 0px #0000003b;
     border-radius: 0 0 10px 10px;
   }
@@ -44,13 +44,17 @@
   }
 
   .forms {
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-bottom: 10%;
     padding: 4% 0 6% 0;
-    border-spacing: 8px 4px;
+    border-collapse: separate;
+    border-spacing: 6px 4px;
   }
 
+  .forms:nth-child(2) {
+    border-spacing: 12px 4px;
+  }
   
   thead th {
     padding: 10px 5px;
@@ -59,12 +63,15 @@
     text-align: center;
   }
 
+  thead tr {
+    padding-right: 200px;
+  }
+
   tbody td {
-    width: 64px;
+    width: 68px;
     height: 30px;
     text-align: center;
     border-radius: 4px;
-    gap: 20px;
   }
 
 .corpo tr td {
@@ -83,5 +90,3 @@
     font-size: 15px;
     font-weight: 500;
   }
-
-  

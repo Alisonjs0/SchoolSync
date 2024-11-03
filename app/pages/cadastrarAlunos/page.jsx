@@ -5,10 +5,10 @@ const CadastroAluno = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className='container conteudoMenus'>
+        <div className='conteiner conteudoMenus'>
         <h3>Cadastro de Usuario / Aluno</h3>
         <div className='conteudo'>
-            <input type="submit" value="Cadastrar Usuario" />
+
         </div>
         </div>
       </EsqueletoPrincipal>

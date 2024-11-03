@@ -34,6 +34,7 @@ table tr th {
     width: 15%;
     height: 3rem;
     border: 1px solid black;
+    text-align: center;
 }
 
 table thead th {

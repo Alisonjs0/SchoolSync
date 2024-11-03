@@ -17,7 +17,7 @@ const ConteudoMenus = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className={`${"container"} ${"conteudoMenus"}`}>
+        <div className={`${"conteiner"} ${"conteudoMenus"}`}>
           <h3>Dashboard</h3>
           {user.tipo === "aluno" ? (
             <div>
