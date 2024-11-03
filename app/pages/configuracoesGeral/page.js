@@ -1,12 +1,11 @@
-import EsqueletoPrincipal from '../esqueletoPrincipal/page.js'
+import EsqueletoPrincipal from '../esqueletoPrincipal/page.jsx'
 import "./configuracoesGeral.css"
 
 const ConfiguracoesGeral = () => {
     return (
         <EsqueletoPrincipal>
+            <h3>Configurações</h3>
             <div className="container conteudoMenus">
-                <h3>Configurações</h3>
-
                 <div className='ctn-sub-menus'>
                     <a href="">Geral</a>
                     <a href="">Alterar senha</a>
@@ -45,6 +44,7 @@ const ConfiguracoesGeral = () => {
                         type="text"
                     />
                 </div>
+
                 <div className="Button">
                     <button id="SaveButton">Salvar</button>
                     <button id="CancelButton">Cancelar</button>
