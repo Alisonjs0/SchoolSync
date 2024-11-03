@@ -12,7 +12,7 @@ import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
 import "./calendario.css"
 
 const CalendarComponent = dynamic(() => import("./components/calendar.jsx"), {
-  ssr: false, // Desativa SSR para esse componente
+  ssr: true, // Desativa SSR para esse componente
 });
 
 export default function Page() {

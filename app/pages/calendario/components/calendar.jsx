@@ -1,5 +1,6 @@
 "use client";
 
+import { user as initialUserData } from "../../data/infos.js";
 import React, { useEffect, useState } from "react";
 import "./css/style.css";
 import { Calendar } from "@fullcalendar/core";
@@ -13,6 +14,7 @@ import moment from "moment";
 moment.locale("pt-br");
 
 const CalendarComponent = () => {
+  const [user, setUser] = useState(initialUserData);
   const [calendar, setCalendar] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -75,10 +77,10 @@ const CalendarComponent = () => {
           },
         },
       },
-      headerToolbar: {
-        center: "addEventButton",
-        right: "todayButton,prev,next",
-      },
+      headerToolbar:
+        user.tipo === "admin"
+          ? { center: "addEventButton", right: "todayButton,prev,next" }
+          : { right: "todayButton,prev,next" },
       events: events,
       eventClick: (info) => {
         handleEventClick(info);
@@ -140,7 +142,7 @@ const CalendarComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (eventData.end <= eventData.start) {
+    if (eventData.end && eventData.end <= eventData.start) {
       setDangerAlertVisible(true);
       return;
     }
@@ -152,7 +154,7 @@ const CalendarComponent = () => {
             ...event,
             title: eventData.title,
             start: eventData.start,
-            end: eventData.end,
+            end: eventData.end || null,
             backgroundColor: eventData.color,
           };
         }
