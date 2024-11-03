@@ -5,7 +5,7 @@ const ContatoSuporte = () => {
     return (
         <EsqueletoPrincipal>
             <h3 className='title'>Contato / Suporte</h3>
-            <div className='conteiner conteudoMenus'>
+            <div className='container conteudoMenus'>
                 <h3 className='subtitle'>Entre em contato</h3>
                 <input className='label-input'
                     id="Usuario" 

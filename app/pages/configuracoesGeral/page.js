@@ -4,7 +4,7 @@ import "./configuracoesGeral.css"
 const ConfiguracoesGeral = () => {
     return (
         <EsqueletoPrincipal>
-            <div className="conteiner conteudoMenus">
+            <div className="container conteudoMenus">
                 <h3>Configurações</h3>
 
                 <div className='ctn-sub-menus'>
