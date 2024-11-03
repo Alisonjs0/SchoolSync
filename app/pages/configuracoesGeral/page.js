@@ -12,8 +12,14 @@ const ConfiguracoesGeral = () => {
                     <a href="">Notificações</a>
                 </div>
 
+                {/* <div class="linha-vertical"></div> */}
+        
                 <div className='ctn-form'>
-                    <label>Nome completo:</label>
+                    <div className="Button-cd">
+                        <button id="ChangeButton">Trocar Imagem</button>
+                        <button id="ResetButton">Reset</button>
+                    </div>
+                    <label>Nome de Usuário:</label>
                     <input className='label-input'
                         id="Usuario" 
                         type="text"
