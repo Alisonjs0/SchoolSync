@@ -24,6 +24,10 @@ h3{
     color: black;
  }
 
+#geral{
+    text-decoration: underline;
+}
+
 .icon{
    width: 10%;
    height: 5%;
@@ -98,13 +102,12 @@ h3{
 #CancelButton{
     width: 8rem;
     height: 2.5rem;
-    background: #fff;
+    background: none;
     color:black;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 16px;
-    border: none;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 .Button-cd{
@@ -120,10 +123,11 @@ h3{
     height: 2.5rem;
     border-color: black;
     color:black;
+    background-color: none;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 15px;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 #ResetButton{
@@ -131,10 +135,11 @@ h3{
     height: 2.5rem;
     border-color: black;
     color:black;
+    background-color: none;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 15px;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 .Button{
@@ -153,7 +158,7 @@ h3{
 }
 
 .Button-cd button:hover {
-    background: #fff;
+    background: #CCCCCC;
     transform: scale(1.05);
     transition: .3s;
 }

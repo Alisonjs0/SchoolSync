@@ -7,9 +7,9 @@ const AlterarSenhaPt2 = () => {
             <h3>Configurações</h3>
             <div className="container conteudoMenus">
                 <div className='ctn-sub-menus'>
-                        <a href="">Geral</a>
-                        <a href="">Alterar senha</a>
-                        <a href="">Notificações</a>
+                        <a href="" id='geral'>Geral</a>
+                        <a href="" id='senha'>Alterar senha</a>
+                        <a href="" id='not'>Notificações</a>
                 </div>
 
                 <div className='ctn-form'>
@@ -33,7 +33,7 @@ const AlterarSenhaPt2 = () => {
                     Envie-me um e-mail 
                     </label>
                 </div>
-                
+
                 <div className="Button">
                     <button id="SaveButton">Salvar</button>
                     <button id="CancelButton">Cancelar</button>

@@ -8,9 +8,9 @@ const ConfiguracoesGeral = () => {
             <div className="container conteudoMenus">
 
                 <div className='ctn-sub-menus'>
-                    <a href="">Geral</a>
-                    <a href="">Alterar senha</a>
-                    <a href="">Notificações</a>
+                    <a href="" id='geral'>Geral</a>
+                    <a href="" id='senha'>Alterar senha</a>
+                    <a href="" id='not'>Notificações</a>
                 </div>
 
                 {/* <div class="linha-vertical"></div>                     */}

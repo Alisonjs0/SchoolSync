@@ -24,6 +24,10 @@ h3{
     color: black;
  }
 
+ #senha{
+    text-decoration: underline;
+ }
+
  .ctn-form{
     display: flex;
     padding-left: 25%;
@@ -82,8 +86,7 @@ input{
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 16px;
-    border: none;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 .Button button:hover {
