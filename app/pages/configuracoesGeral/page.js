@@ -4,17 +4,22 @@ import "./configuracoesGeral.css"
 const ConfiguracoesGeral = () => {
     return (
         <EsqueletoPrincipal>
+            <h3>Configurações</h3>
             <div className="container conteudoMenus">
-                <h3>Configurações</h3>
-
                 <div className='ctn-sub-menus'>
                     <a href="">Geral</a>
                     <a href="">Alterar senha</a>
                     <a href="">Notificações</a>
                 </div>
 
+                {/* <div class="linha-vertical"></div> */}
+        
                 <div className='ctn-form'>
-                    <label>Nome completo:</label>
+                    <div className="Button-cd">
+                        <button id="ChangeButton">Trocar Imagem</button>
+                        <button id="ResetButton">Reset</button>
+                    </div>
+                    <label>Nome de Usuário:</label>
                     <input className='label-input'
                         id="Usuario" 
                         type="text"
@@ -45,6 +50,7 @@ const ConfiguracoesGeral = () => {
                         type="text"
                     />
                 </div>
+
                 <div className="Button">
                     <button id="SaveButton">Salvar</button>
                     <button id="CancelButton">Cancelar</button>
