@@ -24,6 +24,7 @@
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.199);
     padding: 0 20px;
+    font-size: 15px;
 }
 
 /* Container personalizado para o select */
@@ -49,7 +50,7 @@
     border: none;              /* Remove a borda para evitar duplicação */
     background: transparent;
     box-sizing: border-box;
-    font-size: 13px;           /* Ajuste de tamanho da fonte, se necessário */
+    font-size: 15px;           /* Ajuste de tamanho da fonte, se necessário */
     outline: none;
     color: #4f4f4fe3;
 }

@@ -8,18 +8,13 @@ import "./cadastrarUsuario.css";
 import { useState } from "react";
 
 const CadastrarUsuario = () => {
-
-  const nextPage = () => {
-
-  }
-
   return (
     <div>
       <EsqueletoPrincipal>
         <div className="conteiner conteudoMenus">
           <h3>Cadastrar Alunos</h3>
           <div className="conteudo">
-            <FormAluno></FormAluno>
+            <FormGeral></FormGeral>
           </div>
         </div>
       </EsqueletoPrincipal>
