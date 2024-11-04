@@ -17,19 +17,25 @@ h3{
 }
 
  .ctn-sub-menus{
+    padding-left: 6.5%;
     padding-top: 3%;
     display: grid;
     font-family: "Roboto", system-ui;
     color: black;
  }
 
- .linha-vertical {
+.icon{
+   width: 10%;
+   height: 5%;
+}
+ 
+ /* .linha-vertical {
+    margin-top: 10%;
     display: flex;
-    justify-content: center;
     color: black;
-    height: 500px;
+    height: 600px;
     border-left: 2px solid;
-} 
+}  */
 
  label{
     margin-top: 3%;
@@ -73,7 +79,7 @@ h3{
 .ctn-form{
     display: flex;
     padding-left: 25%;
-    margin-top: -11%;
+    margin-top: -19%;
     flex-direction: column;
 }
 
@@ -102,10 +108,11 @@ h3{
 }
 
 .Button-cd{
-    display:flex;
+    display: inline-flex;
+    padding-left: -3%;
+    padding-right: 45%;
+    margin-top: 9%;
     justify-content: space-between;
-    margin-left: 25%;
-    margin-right: 40%;
 }
 
 #ChangeButton{
