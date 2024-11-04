@@ -138,11 +138,18 @@ h3{
 }
 
 .Button{
-    display:flex;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-left: 30rem;
+    margin-top: 2rem ;
+    margin-right: 8rem;
+
+    /* display:flex;
     margin-top: 3%;
     margin-left: 53%;
     margin-right: 15%;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .Button-cd button:hover {
