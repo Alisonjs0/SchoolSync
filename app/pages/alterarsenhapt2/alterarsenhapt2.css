@@ -1,0 +1,83 @@
+.conteudoMenus{
+    width: 85%;
+    background: #EAEAEA;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px #0000003b;
+    height: 85%;    
+    margin-left: 10%;
+    margin-top: 3%;
+} 
+
+h3{
+    color: black;
+    font-family: "Roboto", system-ui;
+    font-size: medium;
+    margin-left: 5%;
+    margin-bottom: -3%;
+}
+
+h4{
+    color: black;
+    font-family: "Roboto", system-ui;
+    font-size: large;
+    padding-left: 30%;
+    margin-top: -8.5%;
+}
+
+.ctn-sub-menus{
+    padding-left: 6.5%;
+    padding-top: 3%;
+    display: grid;
+    font-family: "Roboto", system-ui;
+    color: black;
+ }
+
+ label{
+    margin-top: 3%;
+    color: black;
+    display: grid;
+    font-family: "Roboto", system-ui;
+}
+
+input{
+    width: 2.5rem;
+    height: 1.3rem;
+}
+
+.Button{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-left: 30rem;
+    margin-top: 2rem ;
+    margin-right: 8rem;
+}
+
+#SaveButton{
+    width: 8rem;
+    height: 2.5rem;
+    background: #0E4C8C;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Roboto", system-ui;
+    font-size: 16px;
+    border: none;
+    box-shadow: 2px 2px 4px black;
+}
+
+#CancelButton{
+    width: 8rem;
+    height: 2.5rem;
+    background: none;
+    color:black;
+    border-radius: 5px;
+    font-family: "Roboto", system-ui;
+    font-size: 16px;
+    border: 1px solid;
+}
+
+.Button button:hover {
+    background: #0c3a69;
+    transform: scale(1.05);
+    transition: .5s;
+}
