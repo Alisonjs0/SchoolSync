@@ -20,8 +20,7 @@ h4{
     color: black;
     font-family: "Roboto", system-ui;
     font-size: large;
-    padding-left: 30%;
-    margin-top: -8.5%;
+    margin-top: -8%;
 }
 
 .ctn-sub-menus{
@@ -35,13 +34,17 @@ h4{
  label{
     margin-top: 3%;
     color: black;
-    display: grid;
     font-family: "Roboto", system-ui;
 }
 
 input{
-    width: 2.5rem;
-    height: 1.3rem;
+    width: 2rem;
+    height: 1.1rem;
+}
+
+.ctn-form{
+    display: grid;
+    margin-left: 25%;
 }
 
 .Button{

@@ -32,10 +32,11 @@ const AlterarSenhaPt2 = () => {
                     />
                     Envie-me um e-mail 
                     </label>
-                    <div className="Button">
+                </div>
+                
+                <div className="Button">
                     <button id="SaveButton">Salvar</button>
                     <button id="CancelButton">Cancelar</button>
-                    </div>
                 </div>
             </div>
         </EsqueletoPrincipal>
