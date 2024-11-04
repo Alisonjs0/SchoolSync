@@ -77,7 +77,7 @@ input{
 #CancelButton{
     width: 8rem;
     height: 2.5rem;
-    background: #fff;
+    background: none;
     color:black;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
