@@ -17,19 +17,29 @@ h3{
 }
 
  .ctn-sub-menus{
+    padding-left: 6.5%;
     padding-top: 3%;
     display: grid;
     font-family: "Roboto", system-ui;
     color: black;
  }
 
- .linha-vertical {
+#geral{
+    text-decoration: underline;
+}
+
+.icon{
+   width: 10%;
+   height: 5%;
+}
+ 
+ /* .linha-vertical {
+    margin-top: 10%;
     display: flex;
-    justify-content: center;
     color: black;
-    height: 500px;
+    height: 600px;
     border-left: 2px solid;
-} 
+}  */
 
  label{
     margin-top: 3%;
@@ -73,7 +83,7 @@ h3{
 .ctn-form{
     display: flex;
     padding-left: 25%;
-    margin-top: -11%;
+    margin-top: -19%;
     flex-direction: column;
 }
 
@@ -92,20 +102,20 @@ h3{
 #CancelButton{
     width: 8rem;
     height: 2.5rem;
-    background: #fff;
+    background: none;
     color:black;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 16px;
-    border: none;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 .Button-cd{
-    display:flex;
+    display: inline-flex;
+    padding-left: -3%;
+    padding-right: 45%;
+    margin-top: 9%;
     justify-content: space-between;
-    margin-left: 25%;
-    margin-right: 40%;
 }
 
 #ChangeButton{
@@ -113,10 +123,11 @@ h3{
     height: 2.5rem;
     border-color: black;
     color:black;
+    background-color: none;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 15px;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 #ResetButton{
@@ -124,22 +135,30 @@ h3{
     height: 2.5rem;
     border-color: black;
     color:black;
+    background-color: none;
     border-radius: 5px;
     font-family: "Roboto", system-ui;
     font-size: 15px;
-    box-shadow: 2px 2px 4px black;
+    border: 1px solid;
 }
 
 .Button{
-    display:flex;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-left: 30rem;
+    margin-top: 2rem ;
+    margin-right: 8rem;
+
+    /* display:flex;
     margin-top: 3%;
     margin-left: 53%;
     margin-right: 15%;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .Button-cd button:hover {
-    background: #fff;
+    background: #CCCCCC;
     transform: scale(1.05);
     transition: .3s;
 }

@@ -6,16 +6,18 @@ const ConfiguracoesGeral = () => {
         <EsqueletoPrincipal>
             <h3>Configurações</h3>
             <div className="container conteudoMenus">
+
                 <div className='ctn-sub-menus'>
-                    <a href="">Geral</a>
-                    <a href="">Alterar senha</a>
-                    <a href="">Notificações</a>
+                    <a href="" id='geral'>Geral</a>
+                    <a href="" id='senha'>Alterar senha</a>
+                    <a href="" id='not'>Notificações</a>
                 </div>
 
-                {/* <div class="linha-vertical"></div> */}
-        
+                {/* <div class="linha-vertical"></div>                     */}
+
                 <div className='ctn-form'>
                     <div className="Button-cd">
+                        <div className='icon'><img src='/assets/user.png'/></div>
                         <button id="ChangeButton">Trocar Imagem</button>
                         <button id="ResetButton">Reset</button>
                     </div>
