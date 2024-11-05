@@ -114,9 +114,10 @@ const CalendarComponent = () => {
     };
   }, [events]);
 
-  const handleEventClick = (info) => {
-    const clickedEvent = events.find((event) => event.id === info.event.id);
-    if (clickedEvent) {
+
+const handleEventClick = (info) => {
+  const clickedEvent = events.find((event) => event.id === info.event.id)
+    if (clickedEvent && user.tipo === "admin") {
       setEventData({
         id: clickedEvent.id || "",
         title: clickedEvent.title || "",
