@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import style from "./styles/cadastrarAlunos.module.css"
-
 const FormAluno = () => {
   const [turma, setTurma] = useState();
   const [data, setData] = useState();
@@ -16,12 +14,6 @@ const FormAluno = () => {
     resize: "none",
     outline: "none"
   }
-
-  const button = {
-    background: "#0E4C8C",
-    color: "#fff"
-  }
-  
 
   const Cadastrar = (e) => {
     e.preventDefault()
@@ -79,7 +71,7 @@ const FormAluno = () => {
           style={textArea}
           onChange={(e) => setObs(e.target.value)}
         ></textarea>
-        <button onClick={Cadastrar} style={button}>Cadastrar Aluno</button>
+        <button className="button" onClick={Cadastrar}>Cadastrar Aluno</button>
       </form>
     </div>
   );

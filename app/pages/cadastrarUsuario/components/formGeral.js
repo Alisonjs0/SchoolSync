@@ -73,17 +73,15 @@ const FormGeral = () => {
           onChange={(e) => setConfirmSenha(e.target.value)}
         />
         {/* Select dentro de um contêiner para personalização da seta */}
-        <div className="select-container">
-          <select name="" id="">
-            <option value="selecione">Selecione</option>
-            <option value="professor">Professor</option>
-            <option value="aluno">Aluno</option>
-            <option value="ADM">ADM</option>
-          </select>
-        </div>
-        <a href="">
-          <button className="button">Cadastrar Usuario</button>
-        </a>
+
+        <select name="" id="">
+          <option value="selecione">Selecione</option>
+          <option value="professor">Professor</option>
+          <option value="aluno">Aluno</option>
+          <option value="admin">ADM</option>
+        </select>
+
+        <button className="button">Cadastrar Usuario</button>
       </form>
     </div>
   );
