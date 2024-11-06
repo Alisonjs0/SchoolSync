@@ -17,7 +17,7 @@ const ConfiguracoesGeral = () => {
 
                 <div className='ctn-form'>
                     <div className="Button-cd">
-                        <div className='icon'><img src='/assets/user.png'/></div>
+                        <div className='icon-id'><img src='/assets/user.png'/></div>
                         <button id="ChangeButton">Trocar Imagem</button>
                         <button id="ResetButton">Reset</button>
                     </div>
