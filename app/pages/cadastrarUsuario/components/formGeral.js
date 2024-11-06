@@ -74,7 +74,7 @@ const FormGeral = () => {
         />
         {/* Select dentro de um contêiner para personalização da seta */}
 
-        <select name="" id="">
+        <select name="" id="" onChange={(e) => setCargo(e.target.value)}>
           <option value="selecione">Selecione</option>
           <option value="professor">Professor</option>
           <option value="aluno">Aluno</option>
