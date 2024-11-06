@@ -59,6 +59,7 @@ input{
 
 .Button{
     display: flex;
+    margin-left: 2%;
     margin-top: 1.5rem ;
     justify-content: space-evenly;
     /* display: flex;
