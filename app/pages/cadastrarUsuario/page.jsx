@@ -4,17 +4,13 @@ import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
 import { IoIosReturnLeft } from "react-icons/io";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
+import FormAdmin from "./components/formAdmin.js";
 import "./cadastrarUsuario.css";
 import { useState } from "react";
 
-const stages = [
-  { id: 0, name: "Geral" },
-  { id: 1, name: "Aluno" },
-  { id: 2, name: "Professor" },
-];
 
 const CadastrarUsuario = () => {
-  const [stage, setStage] = useState(stages[0].name);
+  const [stage, setStage] = useState("Geral");
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
@@ -46,12 +42,18 @@ const CadastrarUsuario = () => {
     setTel(telefoneFormatado);
   };
 
-  const nextPage = () => {
-    if (stage !== "selecione") {
-    console.log(stage);
-    setStage(cargo);
+  const nextPage = (event) => {
+      event.preventDefault();
+      if (cargo !== "selecione" && cargo !== undefined && stage == "Geral") {
+        setStage(cargo);
+        console.log(cargo)
+      } 
   }
-}
+
+  const retornar = () => {
+    setStage("Geral");
+  };
+
   return (
     <div>
       <EsqueletoPrincipal>
@@ -64,12 +66,14 @@ const CadastrarUsuario = () => {
                   type="text"
                   placeholder="Nome:"
                   onChange={(e) => setNome(e.target.value)}
+                  value={nome}
                   required
                 />
                 <input
                   type="email"
                   placeholder="Email:"
                   onChange={(e) => setEmail(e.target.value)}
+                  value={email}
                   required
                 />
                 <input
@@ -83,16 +87,19 @@ const CadastrarUsuario = () => {
                   type="number"
                   placeholder="CPF"
                   onChange={(e) => setCpf(e.target.value)}
+                  value={cpf}
                   required
                 />
                 <input
                   type="password"
                   placeholder="Senha:"
+                  value={senha}
                   onChange={(e) => setSenha(e.target.value)}
                 />
                 <input
                   type="password"
                   placeholder="Confirmar Senha:"
+                  value={confirmSenha}
                   onChange={(e) => setConfirmSenha(e.target.value)}
                   required
                 />
@@ -102,13 +109,15 @@ const CadastrarUsuario = () => {
                   name=""
                   id=""
                   onChange={(e) => setCargo(e.target.value)}
+                  value={cargo}
+                  required
                 >
                   <option value="selecione">Selecione</option>
                   <option value="Professor">Professor</option>
                   <option value="Aluno">Aluno</option>
                   <option value="Admin">ADM</option>
                 </select>
-
+                
                 <button className="button" type="submit">
                   Cadastrar Usuario
                 </button>
@@ -118,7 +127,7 @@ const CadastrarUsuario = () => {
               <>
                 <span
                   className="position-absolute"
-                  onClick={() => setStage("Geral")}
+                  onClick={retornar}
                 >
                   <IoIosReturnLeft
                     style={{ cursor: "pointer" }}
@@ -128,12 +137,11 @@ const CadastrarUsuario = () => {
                  <FormAluno />
               </>
               )}
-
             {stage === "Professor" && (
               <>
                 <span
                   className="position-absolute"
-                  onClick={() => setStage("Geral")}
+                  onClick={retornar}
                 >
                   <IoIosReturnLeft
                     style={{ cursor: "pointer" }}
@@ -141,6 +149,20 @@ const CadastrarUsuario = () => {
                   />
                 </span>
                 <FormProfessor />
+              </>
+            )}
+            {stage === "Admin" && (
+              <>
+              <span
+                  className="position-absolute"
+                  onClick={retornar}
+                >
+                  <IoIosReturnLeft
+                    style={{ cursor: "pointer" }}
+                    className="m-3 fs-4"
+                  />
+                </span>
+                <FormAdmin />
               </>
             )}
           </div>
