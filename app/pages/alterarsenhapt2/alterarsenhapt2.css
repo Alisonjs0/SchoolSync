@@ -53,11 +53,14 @@ input{
 
 .Button{
     display: flex;
+    margin-top: 1.5rem ;
+    justify-content: space-evenly;
+    /* display: flex;
     flex-direction:row;
     justify-content: space-between;
     margin-left: 30rem;
     margin-top: 2rem ;
-    margin-right: 8rem;
+    margin-right: 8rem; */
 }
 
 #SaveButton{
