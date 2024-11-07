@@ -2,8 +2,8 @@
     padding: 0 100px;
 }
 
-.conteudo h3 {
-    padding: 0;
+.conteudo .titulo {
+    padding: 20px 0;
     font-weight: 600;
     font-size: 24px;
     transition: all 1s ease;
