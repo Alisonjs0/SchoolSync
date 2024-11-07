@@ -18,7 +18,7 @@ const ConteudoMenuLateral = () => {
     <div>
         <div id="menuLateral" className="menuLateral">
             <nav>
-                <ul className="listaLateral">
+                <ul className="listaLateral container">
                     {user.tipo === "professor" ? (
                         <div>
                             <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
