@@ -5,10 +5,9 @@ import { IoIosReturnLeft } from "react-icons/io";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
 import FormAdmin from "./components/formAdmin.js";
-import {user as initialUserData} from '../data/infos.js';
+import { user as initialUserData } from "../data/infos.js";
 import "./cadastrarUsuario.css";
 import { useState } from "react";
-
 
 const CadastrarUsuario = () => {
   const [user, setUser] = useState(initialUserData);
@@ -20,7 +19,7 @@ const CadastrarUsuario = () => {
   const [senha, setSenha] = useState("");
   const [confirmSenha, setConfirmSenha] = useState("");
   const [cargo, setCargo] = useState();
-  
+  const [sexo, setSexo] = useState();
 
   const formatarTelefone = (telefone) => {
     // Remove todos os caracteres que não sejam números
@@ -45,11 +44,24 @@ const CadastrarUsuario = () => {
   };
 
   const nextPage = (event) => {
-      if (cargo !== "selecione" && cargo !== undefined && stage == "Geral") {
-        setStage(cargo);
-        console.log(cargo)
-      } 
-  }
+    event.preventDefault();
+    console.log(cargo);
+    console.log(sexo);
+    if (
+      cargo !== "selecione" &&
+      cargo &&
+      stage == "Geral" &&
+      sexo !== "genero" &&
+      sexo
+    ) {
+      setStage(cargo);
+      console.log(cargo);
+    } else if (cargo == "selecione") {
+      alert("Selecione o cargo");
+    } else if (!sexo || sexo === "genero") {
+      alert("Selecione o sexo");
+    }
+  };
 
   const retornar = () => {
     setStage("Geral");
@@ -59,117 +71,111 @@ const CadastrarUsuario = () => {
     <div>
       {user.tipo === "admin" && (
         <EsqueletoPrincipal>
-        <div className="conteiner conteudoMenus">
-          <h3>Cadastrar {stage}</h3>
-          <div className="conteudo position-relative">
-            {stage === "Geral" && (
-              <form id="forms" action="" onSubmit={nextPage}>
-                <input
-                  type="text"
-                  placeholder="Nome:"
-                  onChange={(e) => setNome(e.target.value)}
-                  value={nome}
-                  
-                />
-                <input
-                  type="email"
-                  placeholder="Email:"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  
-                />
-                <input
-                  type="tel"
-                  placeholder="Telefone:"
-                  value={tel}
-                  onChange={handleTelefoneChange}
-                  
-                />
-                <input
-                  type="number"
-                  placeholder="CPF"
-                  onChange={(e) => setCpf(e.target.value)}
-                  value={cpf}
-                  
-                />
-                <input
-                  type="password"
-                  placeholder="Senha:"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
-                />
-                <input
-                  type="password"
-                  placeholder="Confirmar Senha:"
-                  value={confirmSenha}
-                  onChange={(e) => setConfirmSenha(e.target.value)}
-                  
-                />
-                {/* Select dentro de um contêiner para personalização da seta */}
+          <div className="conteiner conteudoMenus">
+            <h3>Cadastrar {stage}</h3>
+            <div className="conteudo position-relative">
+              {stage === "Geral" && (
+                <form id="forms" action="" onSubmit={nextPage}>
+                  <input
+                    type="text"
+                    placeholder="Nome:"
+                    onChange={(e) => setNome(e.target.value)}
+                    value={nome}
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email:"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Telefone:"
+                    value={tel}
+                    onChange={handleTelefoneChange}
+                  />
+                  <input
+                    type="number"
+                    placeholder="CPF"
+                    onChange={(e) => setCpf(e.target.value)}
+                    value={cpf}
+                  />
+                  <input
+                    type="password"
+                    placeholder="Senha:"
+                    value={senha}
+                    onChange={(e) => setSenha(e.target.value)}
+                  />
+                  <input
+                    type="password"
+                    placeholder="Confirmar Senha:"
+                    value={confirmSenha}
+                    onChange={(e) => setConfirmSenha(e.target.value)}
+                  />
+                  <select
+                    name=""
+                    id=""
+                    onChange={(e) => setSexo(e.target.value)}
+                    value={sexo}
+                  >
+                    <option value="genero">Genero</option>
+                    <option value="Maculino">Maculino</option>
+                    <option value="Feminino">Feminino</option>
+                  </select>
 
-                <select
-                  name=""
-                  id=""
-                  onChange={(e) => setCargo(e.target.value)}
-                  value={cargo}
-                  
-                >
-                  <option value="selecione">Selecione</option>
-                  <option value="Professor">Professor</option>
-                  <option value="Aluno">Aluno</option>
-                  <option value="Admin">Admin</option>
-                </select>
-                
-                <button className="button" type="submit">
-                  Cadastrar Usuario
-                </button>
-              </form>
-            )}
-            {stage === "Aluno" && (
-              <>
-                <span
-                  className="position-absolute"
-                  onClick={retornar}
-                >
-                  <IoIosReturnLeft
-                    style={{ cursor: "pointer" }}
-                    className="m-3 fs-4"
-                  />
-                </span>
-                 <FormAluno />
-              </>
+                  <select
+                    name=""
+                    id=""
+                    onChange={(e) => setCargo(e.target.value)}
+                    value={cargo}
+                  >
+                    <option value="selecione">Selecione</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Aluno">Aluno</option>
+                    <option value="Admin">Admin</option>
+                  </select>
+
+                  <button className="button" type="submit">
+                    Cadastrar Usuario
+                  </button>
+                </form>
               )}
-            {stage === "Professor" && (
-              <>
-                <span
-                  className="position-absolute"
-                  onClick={retornar}
-                >
-                  <IoIosReturnLeft
-                    style={{ cursor: "pointer" }}
-                    className="m-3 fs-4"
-                  />
-                </span>
-                <FormProfessor />
-              </>
-            )}
-            {stage === "Admin" && (
-              <>
-              <span
-                  className="position-absolute"
-                  onClick={retornar}
-                >
-                  <IoIosReturnLeft
-                    style={{ cursor: "pointer" }}
-                    className="m-3 fs-4"
-                  />
-                </span>
-                <FormAdmin />
-              </>
-            )}
+              {stage === "Aluno" && (
+                <>
+                  <span className="position-absolute" onClick={retornar}>
+                    <IoIosReturnLeft
+                      style={{ cursor: "pointer" }}
+                      className="m-3 fs-4"
+                    />
+                  </span>
+                  <FormAluno />
+                </>
+              )}
+              {stage === "Professor" && (
+                <>
+                  <span className="position-absolute" onClick={retornar}>
+                    <IoIosReturnLeft
+                      style={{ cursor: "pointer" }}
+                      className="m-3 fs-4"
+                    />
+                  </span>
+                  <FormProfessor />
+                </>
+              )}
+              {stage === "Admin" && (
+                <>
+                  <span className="position-absolute" onClick={retornar}>
+                    <IoIosReturnLeft
+                      style={{ cursor: "pointer" }}
+                      className="m-3 fs-4"
+                    />
+                  </span>
+                  <FormAdmin />
+                </>
+              )}
+            </div>
           </div>
-        </div>
-      </EsqueletoPrincipal>
+        </EsqueletoPrincipal>
       )}
       {user.tipo !== "admin" && (
         <div className="alert alert-danger" role="alert">
