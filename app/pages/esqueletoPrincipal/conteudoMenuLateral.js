@@ -22,26 +22,27 @@ const ConteudoMenuLateral = () => {
                     {user.tipo === "professor" ? (
                         <div>
                             <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
-                            <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
+                            <li><a href="./calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href=""><IoPeople className="iconMenuLateral" /> <p>Gestão de turmas</p></a></li>
-                            <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
+                            <li><a href="./contatosuporte"><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
                             <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
                     ) : user.tipo === "admin" ? (
                         <div>
                             <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
-                            <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
-                            <li><a href=""><FaUserPlus className="iconMenuLateral"/> <p>Cadastrar Usuario</p></a></li>
+                            <li><a href="./calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
+                            <li><a href="./cadastrarUsuario"><FaUserPlus className="iconMenuLateral"/> <p>Cadastrar Usuario</p></a></li>
                             <li><a href=""><IoPeople className="iconMenuLateral" /> <p>Gestão de turmas</p></a></li>
-                            <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
+                            <li><a href="./contatosuporte"><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
+                            <li><a href="./configuracoesGeral"><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
                     ) : user.tipo === "aluno" ? (
                         <div>
                             <li><a href="./dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></a></li>
-                            <li><a href=""><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
+                            <li><a href="./calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></a></li>
                             <li><a href="./horarios"><FaClock className="iconMenuLateral"/> <p>Horarios</p></a></li>
                             <li><a href="./boletimEscolar"><FaBookOpen className="iconMenuLateral" /> <p>Boletim escolar</p></a></li>
-                            <li><a href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
+                            <li><a href="./contatosuporte"><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></a></li>
                             <li><a href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></a></li>
                         </div>
                     ) : null}
