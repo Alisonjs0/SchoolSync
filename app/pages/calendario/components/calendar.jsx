@@ -114,9 +114,8 @@ const CalendarComponent = () => {
     };
   }, [events]);
 
-
-const handleEventClick = (info) => {
-  const clickedEvent = events.find((event) => event.id === info.event.id)
+  const handleEventClick = (info) => {
+    const clickedEvent = events.find((event) => event.id === info.event.id);
     if (clickedEvent && user.tipo === "admin") {
       setEventData({
         id: clickedEvent.id || "",
@@ -195,8 +194,7 @@ const handleEventClick = (info) => {
         <div className="cd__action"></div>
       </header>
       <main className="cd__main">
-        <div id="calendar"></div>
-
+          <div id="calendar"></div>
         {/* Add Event Modal */}
         <div
           className={`modal fade ${showModal ? "show" : ""}`}
