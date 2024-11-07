@@ -5,11 +5,13 @@ import { IoIosReturnLeft } from "react-icons/io";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
 import FormAdmin from "./components/formAdmin.js";
+import {user as initialUserData} from '../data/infos.js';
 import "./cadastrarUsuario.css";
 import { useState } from "react";
 
 
 const CadastrarUsuario = () => {
+  const [user, setUser] = useState(initialUserData);
   const [stage, setStage] = useState("Geral");
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -43,7 +45,6 @@ const CadastrarUsuario = () => {
   };
 
   const nextPage = (event) => {
-      event.preventDefault();
       if (cargo !== "selecione" && cargo !== undefined && stage == "Geral") {
         setStage(cargo);
         console.log(cargo)
@@ -56,7 +57,8 @@ const CadastrarUsuario = () => {
 
   return (
     <div>
-      <EsqueletoPrincipal>
+      {user.tipo === "admin" && (
+        <EsqueletoPrincipal>
         <div className="conteiner conteudoMenus">
           <h3>Cadastrar {stage}</h3>
           <div className="conteudo position-relative">
@@ -67,28 +69,28 @@ const CadastrarUsuario = () => {
                   placeholder="Nome:"
                   onChange={(e) => setNome(e.target.value)}
                   value={nome}
-                  required
+                  
                 />
                 <input
                   type="email"
                   placeholder="Email:"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  required
+                  
                 />
                 <input
                   type="tel"
                   placeholder="Telefone:"
                   value={tel}
                   onChange={handleTelefoneChange}
-                  required
+                  
                 />
                 <input
                   type="number"
                   placeholder="CPF"
                   onChange={(e) => setCpf(e.target.value)}
                   value={cpf}
-                  required
+                  
                 />
                 <input
                   type="password"
@@ -101,7 +103,7 @@ const CadastrarUsuario = () => {
                   placeholder="Confirmar Senha:"
                   value={confirmSenha}
                   onChange={(e) => setConfirmSenha(e.target.value)}
-                  required
+                  
                 />
                 {/* Select dentro de um contêiner para personalização da seta */}
 
@@ -110,12 +112,12 @@ const CadastrarUsuario = () => {
                   id=""
                   onChange={(e) => setCargo(e.target.value)}
                   value={cargo}
-                  required
+                  
                 >
                   <option value="selecione">Selecione</option>
                   <option value="Professor">Professor</option>
                   <option value="Aluno">Aluno</option>
-                  <option value="Admin">ADM</option>
+                  <option value="Admin">Admin</option>
                 </select>
                 
                 <button className="button" type="submit">
@@ -168,6 +170,12 @@ const CadastrarUsuario = () => {
           </div>
         </div>
       </EsqueletoPrincipal>
+      )}
+      {user.tipo !== "admin" && (
+        <div className="alert alert-danger" role="alert">
+          Acesso negado!
+        </div>
+      )}
     </div>
   );
 };
