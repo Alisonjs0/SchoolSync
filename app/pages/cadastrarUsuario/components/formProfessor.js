@@ -5,17 +5,11 @@ const formProfessor = () => {
   const [materias, setMaterias] = useState([]);
 
   // Opções de exemplo
-  const opcoes = ["Matemática", "Português", "História", "Ciências"];
+  const opcoes = ["Matemática", "Português", "História", "Ciências", "Geografia", "Física", "Biologia", "Química"];
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (opcoes.includes(inputValue) && !materias.includes(inputValue)) {
-      setMaterias((prevMaterias) => [...prevMaterias, inputValue]);
-    } else {
-      alert("Disciplina invalida ou ja inserida");
-    }
-    setInputValue("");
   };
 
   useEffect(() => {
@@ -25,26 +19,11 @@ const formProfessor = () => {
   return (
     <form id="forms" onSubmit={handleSubmit}>
       <div className="materias">
-        <div className="inserir">
-          <input
-            list="disciplinas"
-            id="disciplinas-input"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Digite ou selecione"
-          />
-          <button type="submit">Enviar</button>
-          <datalist id="disciplinas">
-            {opcoes.map((opcao, index) => (
-              <option key={index} value={opcao} />
-            ))}
-          </datalist>
-        </div>
-        <ul>
-          {materias.map((materia, index) => (
-            <li key={index}>{materia}</li>
-          ))}
-        </ul>
+        {opcoes.map((opcao, index) => (
+          <div className="inputContainer" key={index}>
+            <input type="checkbox" className="checkbox" name={opcao} id={opcao} value={opcao}/> <label id="labelContainer" htmlFor="">{opcao}</label>
+          </div>
+        ))}
       </div>
 
       <select name="cargo" id="" defaultValue="">
