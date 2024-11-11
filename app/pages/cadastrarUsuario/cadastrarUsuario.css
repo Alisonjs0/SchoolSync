@@ -105,3 +105,45 @@ input[type="number"]::-webkit-outer-spin-button {
 textarea.resize-none {
     resize: none; /* Desabilita o redimensionamento */
 }
+
+
+#forms .materias {
+    height: fit-content;
+    padding: 0;
+}
+
+#forms .materias .inserir input {
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0000003b;
+    padding: 10px;
+}
+
+#forms .materias .inserir input:focus {
+    outline: none;
+}
+
+#forms .materias .inserir button {
+    width: 20%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0000003b;
+    padding: 10px;
+    background: #0E4C8C;
+    color: #fff;
+}
+
+#forms .materias ul {
+    padding-top: 10px;
+    list-style: none;
+    display: flex;
+}
+
+#forms .materias ul li {
+}
+
+#forms .materias ul li:not(:last-child)::after {
+    content: "|";
+    padding: 0 8px;
+}

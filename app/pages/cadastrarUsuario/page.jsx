@@ -101,7 +101,7 @@ const CadastrarUsuario = () => {
                     onChange={(e) => setSexo(e.target.value)}
                     value={sexo}
                   >
-                    <option value="genero">Genero</option>
+                    <option value="genero">Selecionar genero</option>
                     <option value="Maculino">Maculino</option>
                     <option value="Feminino">Feminino</option>
                   </select>
@@ -136,7 +136,7 @@ const CadastrarUsuario = () => {
                     onChange={(e) => setCargo(e.target.value)}
                     value={cargo}
                   >
-                    <option value="selecione">Selecione</option>
+                    <option value="selecione">Selecionar Cargo</option>
                     <option value="Professor">Professor</option>
                     <option value="Aluno">Aluno</option>
                     <option value="Admin">Admin</option>
