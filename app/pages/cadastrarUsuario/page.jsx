@@ -16,6 +16,7 @@ const CadastrarUsuario = () => {
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
   const [cpf, setCpf] = useState("");
+  const [data, setData] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmSenha, setConfirmSenha] = useState("");
   const [cargo, setCargo] = useState();
@@ -83,6 +84,28 @@ const CadastrarUsuario = () => {
                     value={nome}
                   />
                   <input
+                    type="number"
+                    placeholder="CPF"
+                    onChange={(e) => setCpf(e.target.value)}
+                    value={cpf}
+                  />
+                  <input
+                    type="date"
+                    value={data}
+                    onChange={(e) => setData(e.target.value)}
+                    placeholder="Data de Nascimento"
+                  />
+                  <select
+                    name=""
+                    id=""
+                    onChange={(e) => setSexo(e.target.value)}
+                    value={sexo}
+                  >
+                    <option value="genero">Genero</option>
+                    <option value="Maculino">Maculino</option>
+                    <option value="Feminino">Feminino</option>
+                  </select>
+                  <input
                     type="email"
                     placeholder="Email:"
                     onChange={(e) => setEmail(e.target.value)}
@@ -93,12 +116,6 @@ const CadastrarUsuario = () => {
                     placeholder="Telefone:"
                     value={tel}
                     onChange={handleTelefoneChange}
-                  />
-                  <input
-                    type="number"
-                    placeholder="CPF"
-                    onChange={(e) => setCpf(e.target.value)}
-                    value={cpf}
                   />
                   <input
                     type="password"
@@ -112,16 +129,6 @@ const CadastrarUsuario = () => {
                     value={confirmSenha}
                     onChange={(e) => setConfirmSenha(e.target.value)}
                   />
-                  <select
-                    name=""
-                    id=""
-                    onChange={(e) => setSexo(e.target.value)}
-                    value={sexo}
-                  >
-                    <option value="genero">Genero</option>
-                    <option value="Maculino">Maculino</option>
-                    <option value="Feminino">Feminino</option>
-                  </select>
 
                   <select
                     name=""
@@ -134,7 +141,6 @@ const CadastrarUsuario = () => {
                     <option value="Aluno">Aluno</option>
                     <option value="Admin">Admin</option>
                   </select>
-
                   <button className="button" type="submit">
                     Cadastrar Usuario
                   </button>
