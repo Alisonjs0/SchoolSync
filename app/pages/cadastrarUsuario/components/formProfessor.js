@@ -13,6 +13,12 @@ const FormProfessor = () => {
     "Física",
     "Biologia",
     "Química",
+    "Ingles",
+    "Geogafia",
+    "Fíica",
+    "Bioogia",
+    "Quíica",
+    "Inges",
   ];
 
   const handleMateriasSelecionadas = (e) => {
@@ -40,27 +46,29 @@ const FormProfessor = () => {
   return (
     <form id="forms" onSubmit={handleSubmit}>
       <div className="materias">
-        {opcoes.map((opcao, index) => (
-          <div className="inputContainer" key={index}>
-            <input
-              type="checkbox"
-              className="checkbox"
-              value={opcao}
-              checked={materiasSelecionadas.includes(opcao)} // Marca o checkbox se a matéria estiver selecionada
-              onChange={handleMateriasSelecionadas}
-            />
-            <label id={`label-${index}`} htmlFor={`checkbox-${index}`}>
-              {opcao}
-            </label>
-          </div>
-        ))}
+        <p>Materias Lecionadas</p>
         <div>
-          {materiasSelecionadas.map((materia, index) => (
-            <span key={index}>{materia}</span>
+          {opcoes.map((opcao, index) => (
+            <div className="inputContainer" key={index}>
+              <input
+                type="checkbox"
+                className="checkbox"
+                value={opcao}
+                checked={materiasSelecionadas.includes(opcao)} // Marca o checkbox se a matéria estiver selecionada
+                onChange={handleMateriasSelecionadas}
+              />
+              <label id={`label-${index}`} htmlFor={`checkbox-${index}`}>
+                {opcao}
+              </label>
+            </div>
           ))}
         </div>
       </div>
-
+      <div id="materiasSelecionadas">
+        {materiasSelecionadas.map((materia, index) => (
+          <p key={index}>{materia}</p>
+        ))}
+      </div>
       <select name="cargo" id="cargo" defaultValue="">
         <option value="" disabled>
           Selecione Cargo
