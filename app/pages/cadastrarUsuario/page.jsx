@@ -1,13 +1,27 @@
 "use client";
 
+// Componentes
 import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
-import { IoIosReturnLeft } from "react-icons/io";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
 import FormAdmin from "./components/formAdmin.js";
+import FormGeral from "./components/formGeral.js";
+
+// Dados Usuario
 import { user as initialUserData } from "../data/infos.js";
+
+// CSS
 import "./cadastrarUsuario.css";
-import { useState } from "react";
+
+// HOOKS
+import { useState, useEffect } from "react";
+import { useFetch } from "../../hooks/useFetch";
+
+// Icons
+import { IoIosReturnLeft } from "react-icons/io";
+
+// Database
+const url = "http://localhost:3000/Alunos"
 
 const CadastrarUsuario = () => {
   const [user, setUser] = useState(initialUserData);
@@ -16,11 +30,54 @@ const CadastrarUsuario = () => {
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
   const [cpf, setCpf] = useState("");
-  const [data, setData] = useState("");
   const [senha, setSenha] = useState("");
   const [confirmSenha, setConfirmSenha] = useState("");
   const [cargo, setCargo] = useState();
   const [sexo, setSexo] = useState();
+  const [alunos, setAlunos] = useState([]);
+  const [turma, setTurma] = useState();
+  const [data, setData] = useState();
+  const [nomeResponsavel, setNomeResponsavel] = useState("");
+  const [obs, setObs] = useState();
+
+  const { data: fetchedAlunos } = useFetch(url)
+
+  useEffect(() => {
+    if (fetchedAlunos) {
+      setAlunos(fetchedAlunos)
+    }
+  }, [fetchedAlunos])
+
+  const addAluno = async (e) => {
+    e.preventDefault()
+    if (turma === "" || nomeResponsavel === "") {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+    const aluno = {
+      turma,
+      nomeResponsavel,
+      obs
+    }
+    
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(aluno),
+    })
+
+    const addedAluno = await res.json()
+    setAlunos((prevAlunos) => [...prevAlunos, addedAluno])
+    
+    setTurma("");
+    setData("");
+    setNomeResponsavel("");
+    setSexo("selecionar");
+    setObs("");
+  }
 
   const formatarTelefone = (telefone) => {
     // Remove todos os caracteres que não sejam números
@@ -76,75 +133,26 @@ const CadastrarUsuario = () => {
             <h3>Cadastrar {stage}</h3>
             <div className="conteudo position-relative">
               {stage === "Geral" && (
-                <form id="forms" action="" onSubmit={nextPage}>
-                  <input
-                    type="text"
-                    placeholder="Nome:"
-                    onChange={(e) => setNome(e.target.value)}
-                    value={nome}
-                  />
-                  <input
-                    type="number"
-                    placeholder="CPF"
-                    onChange={(e) => setCpf(e.target.value)}
-                    value={cpf}
-                  />
-                  <input
-                    type="date"
-                    value={data}
-                    onChange={(e) => setData(e.target.value)}
-                    placeholder="Data de Nascimento"
-                  />
-                  <select
-                    name=""
-                    id=""
-                    onChange={(e) => setSexo(e.target.value)}
-                    value={sexo}
-                  >
-                    <option value="genero">Selecionar genero</option>
-                    <option value="Maculino">Maculino</option>
-                    <option value="Feminino">Feminino</option>
-                  </select>
-                  <input
-                    type="email"
-                    placeholder="Email:"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Telefone:"
-                    value={tel}
-                    onChange={handleTelefoneChange}
-                  />
-                  <input
-                    type="password"
-                    placeholder="Senha:"
-                    value={senha}
-                    onChange={(e) => setSenha(e.target.value)}
-                  />
-                  <input
-                    type="password"
-                    placeholder="Confirmar Senha:"
-                    value={confirmSenha}
-                    onChange={(e) => setConfirmSenha(e.target.value)}
-                  />
-
-                  <select
-                    name=""
-                    id=""
-                    onChange={(e) => setCargo(e.target.value)}
-                    value={cargo}
-                  >
-                    <option value="selecione">Selecionar Cargo</option>
-                    <option value="Professor">Professor</option>
-                    <option value="Aluno">Aluno</option>
-                    <option value="Admin">Admin</option>
-                  </select>
-                  <button className="button" type="submit">
-                    Cadastrar Usuario
-                  </button>
-                </form>
+                <FormGeral
+                  nextPage={nextPage}
+                  cpf={cpf}
+                  email={email}
+                  senha={senha}
+                  confirmSenha={confirmSenha}
+                  cargo={cargo}
+                  sexo={sexo}
+                  nome={nome}
+                  tel={tel}
+                  setNome={setNome}
+                  setEmail={setEmail}
+                  setTel={setTel}
+                  setCpf={setCpf}
+                  setSenha={setSenha}
+                  setConfirmSenha={setConfirmSenha}
+                  setCargo={setCargo}
+                  setSexo={setSexo}
+                  handleTelefoneChange={handleTelefoneChange}
+                />
               )}
               {stage === "Aluno" && (
                 <>
@@ -154,7 +162,16 @@ const CadastrarUsuario = () => {
                       className="m-3 fs-4"
                     />
                   </span>
-                  <FormAluno />
+                  <FormAluno
+                    aluno={alunos}
+                    turma={turma}
+                    obs={obs}
+                    setObs={setObs}
+                    setAlunos={setAlunos}
+                    setTurma={setTurma}
+                    setNomeResponsavel={setNomeResponsavel}
+                    addAluno={addAluno}
+                  />
                 </>
               )}
               {stage === "Professor" && (
