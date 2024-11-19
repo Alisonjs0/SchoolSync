@@ -1,0 +1,66 @@
+{
+  "Alunos": [
+    {
+      "id": "1",
+      "name": "João",
+      "email": "h7nHt@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Maria",
+      "email": "m7nHt@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "06fc",
+      "turma": "1°B",
+      "data": "22/02/2006",
+      "nomeResponsavel": "Alison jose Serafim",
+      "obs": "2121323"
+    },
+    {
+      "id": "6b42",
+      "turma": "1°B",
+      "data": "22/02/2006",
+      "nomeResponsavel": "Adilmo guimaraes",
+      "sexo": "mac",
+      "obs": "asdasdas"
+    },
+    {
+      "id": "73f9",
+      "turma": "1°A",
+      "data": "22/02/2006",
+      "nomeResponsavel": "Aliaon",
+      "sexo": "mac",
+      "obs": "ads"
+    },
+    {
+      "id": "c90d",
+      "turma": "1°A",
+      "data": "22/02/2006",
+      "nomeResponsavel": "Alison jose serafim",
+      "sexo": "mac",
+      "obs": "hasjn.fa"
+    },
+    {
+      "id": "0416",
+      "turma": "1°B",
+      "data": "23/24/5656",
+      "nomeResponsavel": "hdhgcvbnv",
+      "sexo": "mac",
+      "obs": "rtsedhfcgjhvbnm,bhgfdfghj"
+    },
+    {
+      "id": "5381",
+      "turma": "2°A",
+      "nomeResponsavel": "sddfsd"
+    },
+    {
+      "id": "55f6",
+      "turma": "1°B",
+      "nomeResponsavel": "erfgdfgdf",
+      "obs": "ertfgddf"
+    }
+  ]
+}
