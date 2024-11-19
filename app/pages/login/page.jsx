@@ -2,6 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+
+import { useFetch } from "@/app/hooks/useFetch";
+const url = "http://localhost:3000/Alunos"
+
 import { IoMdHome } from "react-icons/io";
 import "./login-page.css";
 
@@ -12,8 +16,11 @@ const LoginPage = () => {
   const [lembrarSenha, setLembrarSenha] = useState(false);
   console.log(usuario);
 
+  const {data} = useFetch(url)
+  console.log(data);
+
   function Login() {
-    if (usuario === "01704127" && senha === "89627123") {
+    if (data.find((aluno) => "" === usuario && "" === senha)) {
       router.push("/pages/dashboard");
     } else {
       alert("Senha incorreta");
