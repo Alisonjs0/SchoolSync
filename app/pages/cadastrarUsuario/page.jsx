@@ -10,6 +10,9 @@ import FormGeral from "./components/formGeral.js";
 // Dados Usuario
 import { user as initialUserData } from "../data/infos.js";
 
+// Gerar id unico
+import { v4 as uuidv4 } from "uuid";
+
 // CSS
 import "./cadastrarUsuario.css";
 
@@ -21,11 +24,21 @@ import { useFetch } from "../../hooks/useFetch";
 import { IoIosReturnLeft } from "react-icons/io";
 
 // Database
-const url = "http://localhost:3000/Alunos"
+const url = "http://localhost:3000/Usuarios";
 
 const CadastrarUsuario = () => {
   const [user, setUser] = useState(initialUserData);
+
+  // Estagio do cadastro
   const [stage, setStage] = useState("Geral");
+
+  // Criando id unico
+  const uuid = uuidv4();
+  const numericId = uuid.replace(/\D/g, "").substring(0, 5); 
+  const timestamp = Date.now().toString().substring(0, 4);
+  const uniqueNumericId = `${timestamp}${numericId}`;
+
+  // Informacoes geral
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
@@ -34,50 +47,85 @@ const CadastrarUsuario = () => {
   const [confirmSenha, setConfirmSenha] = useState("");
   const [cargo, setCargo] = useState();
   const [sexo, setSexo] = useState();
-  const [alunos, setAlunos] = useState([]);
-  const [turma, setTurma] = useState();
-  const [data, setData] = useState();
-  const [nomeResponsavel, setNomeResponsavel] = useState("");
-  const [obs, setObs] = useState();
+  const [data, setData] = useState("");
+  const [endereco, setEndereco] = useState("");
 
-  const { data: fetchedAlunos } = useFetch(url)
+  const [usuarios, setUsuarios] = useState([]);
+
+  // Informacoes Aluno
+  const [turma, setTurma] = useState("");
+  const [nomeResponsavel, setNomeResponsavel] = useState("");
+  const [obs, setObs] = useState("");
+
+  // Informacoes Professor
+  const [disciplina, setDisciplina] = useState("");
+  const [Tipocontrato, setTipoContrato] = useState("");
+
+  const { data: fetchedUsuarios, httpConfig } = useFetch(url);
 
   useEffect(() => {
-    if (fetchedAlunos) {
-      setAlunos(fetchedAlunos)
+    if (fetchedUsuarios) {
+      setUsuarios(fetchedUsuarios);
     }
-  }, [fetchedAlunos])
+  }, [fetchedUsuarios]);
 
-  const addAluno = async (e) => {
-    e.preventDefault()
+  const addUsuario = async (e) => {
+    e.preventDefault();
     if (turma === "" || nomeResponsavel === "") {
       alert("Por favor, preencha todos os campos.");
       return;
     }
-    const aluno = {
-      turma,
-      nomeResponsavel,
-      obs
+
+    let dataToSend = {
+      nome,
+      email,
+      tel,
+      cpf,
+      senha,
+      cargo,
+      sexo,
+      data,
+    };
+
+    // gera id unico
+    dataToSend.id = uniqueNumericId;
+
+    // Adiciona campos específicos com base no cargo
+    switch (cargo) {
+      case "Aluno":
+        dataToSend = {
+          ...dataToSend, // Inclui os campos gerais
+          turma,
+          nomeResponsavel,
+          obs,
+        };
+        break;
+      case "Professor":
+        dataToSend = {
+          ...dataToSend, // Inclui os campos gerais
+          disciplina,
+          Tipocontrato,
+        };
+        break;
     }
-    
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(aluno),
-    })
+    // Executa a função com os dados consolidados
+    httpConfig(dataToSend, "POST");
 
-    const addedAluno = await res.json()
-    setAlunos((prevAlunos) => [...prevAlunos, addedAluno])
-    
+    setNome("");
+    setEmail("");
+    setTel("");
+    setCpf("");
+    setSenha("");
+    setConfirmSenha("");
+    setCargo("selecione");
     setTurma("");
     setData("");
     setNomeResponsavel("");
     setSexo("selecionar");
     setObs("");
-  }
+    setStage("Geral");
+  };
 
   const formatarTelefone = (telefone) => {
     // Remove todos os caracteres que não sejam números
@@ -103,8 +151,13 @@ const CadastrarUsuario = () => {
 
   const nextPage = (event) => {
     event.preventDefault();
-    console.log(cargo);
-    console.log(sexo);
+    console.log(data);
+
+    if (cargo == "selecione") {
+      alert("Selecione o cargo");
+    } else if (!sexo || sexo === "genero") {
+      alert("Selecione o sexo");
+    }
     if (
       cargo !== "selecione" &&
       cargo &&
@@ -112,12 +165,12 @@ const CadastrarUsuario = () => {
       sexo !== "genero" &&
       sexo
     ) {
-      setStage(cargo);
-      console.log(cargo);
-    } else if (cargo == "selecione") {
-      alert("Selecione o cargo");
-    } else if (!sexo || sexo === "genero") {
-      alert("Selecione o sexo");
+      if (senha === confirmSenha) {
+        setStage(cargo);
+        console.log(cargo);
+      } else {
+        alert("Senhas não coincidem");
+      }
     }
   };
 
@@ -130,7 +183,9 @@ const CadastrarUsuario = () => {
       {user.tipo === "admin" && (
         <EsqueletoPrincipal>
           <div className="conteiner conteudoMenus">
-            <h3>Cadastrar {stage}</h3>
+            <h3 style={{ paddingTop: stage !== "Geral" ? "20px" : "0px" }}>
+              Cadastrar {stage}
+            </h3>
             <div className="conteudo position-relative">
               {stage === "Geral" && (
                 <FormGeral
@@ -151,6 +206,7 @@ const CadastrarUsuario = () => {
                   setConfirmSenha={setConfirmSenha}
                   setCargo={setCargo}
                   setSexo={setSexo}
+                  setData={setData}
                   handleTelefoneChange={handleTelefoneChange}
                 />
               )}
@@ -163,14 +219,14 @@ const CadastrarUsuario = () => {
                     />
                   </span>
                   <FormAluno
-                    aluno={alunos}
+                    usuarios={usuarios}
                     turma={turma}
                     obs={obs}
                     setObs={setObs}
-                    setAlunos={setAlunos}
+                    setUsuarios={setUsuarios}
                     setTurma={setTurma}
                     setNomeResponsavel={setNomeResponsavel}
-                    addAluno={addAluno}
+                    addUsuario={addUsuario}
                   />
                 </>
               )}

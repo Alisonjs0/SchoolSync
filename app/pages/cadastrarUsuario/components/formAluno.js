@@ -1,6 +1,4 @@
-"use client"
-
-const FormAluno = ({turma, nomeResponsavel, obs, setObs, setTurma, setNomeResponsavel, addAluno}) => {
+const FormAluno = ({turma, nomeResponsavel, obs, setObs, setTurma, setNomeResponsavel, addUsuario}) => {
 
   const textArea = {
     height: "100px",
@@ -12,7 +10,7 @@ const FormAluno = ({turma, nomeResponsavel, obs, setObs, setTurma, setNomeRespon
 
   return (
     <div>
-      <form action="" id="forms" onSubmit={addAluno}>
+      <form action="" id="forms" onSubmit={addUsuario}>
         <select name="" id="" value={turma} onChange={(e) => setTurma(e.target.value)}>
           <option value="selecione">Selecione a Turma</option>
           <option value="1°A">Turma 1°A</option>
