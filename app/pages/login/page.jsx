@@ -4,23 +4,21 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { useFetch } from "@/app/hooks/useFetch";
-const url = "http://localhost:3000/Alunos"
+const url = "http://localhost:3000/Usuarios"
 
 import { IoMdHome } from "react-icons/io";
 import "./login-page.css";
 
 const LoginPage = () => {
   const router = useRouter();
-  const [usuario, setUsuario] = useState("");
+  const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
   const [lembrarSenha, setLembrarSenha] = useState(false);
-  console.log(usuario);
-
   const {data} = useFetch(url)
   console.log(data);
 
   function Login() {
-    if (data.find((aluno) => "" === usuario && "" === senha)) {
+    if (data.find((usuario) => usuario.id === user && usuario.senha === senha)) {
       router.push("/pages/dashboard");
     } else {
       alert("Senha incorreta");
@@ -45,8 +43,8 @@ const LoginPage = () => {
             <input
               id="Usuario"
               type="number"
-              value={usuario}
-              onChange={(e) => setUsuario(e.target.value)}
+              value={user}
+              onChange={(e) => setUser(e.target.value)}
             />
           </label>
           <label htmlFor="">
