@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useFetch } from "@/app/hooks/useFetch";
 const url = "http://localhost:3000/Usuarios"
@@ -18,11 +18,19 @@ const LoginPage = () => {
   console.log(data);
 
   function Login() {
-    if (data.find((usuario) => usuario.id === user && usuario.senha === senha)) {
-      router.push("/pages/dashboard");
-    } else {
+    const usuario = data.find((usuario) => usuario.id === user);
+
+    if (!usuario) {
+      // Se o usuário não for encontrado
+      alert("Usuário não encontrado");
+    } else if (usuario.senha !== senha) {
+      // Se a senha estiver incorreta
       alert("Senha incorreta");
+    } else {
+      // Se o usuário e a senha estiverem corretos
+      location.href = "/pages/dashboard";
     }
+    
   }
   return (
     <div className="Login">
