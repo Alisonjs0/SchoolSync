@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
 
 import { useFetch } from "@/app/hooks/useFetch";
 const url = "http://localhost:3000/Usuarios"
@@ -17,6 +18,8 @@ const LoginPage = () => {
   const {data} = useFetch(url)
   console.log(data);
 
+  const {autenticado, setAutenticado} = useGlobalContext();
+
   function Login() {
     const usuario = data.find((usuario) => usuario.id === user);
 
@@ -28,6 +31,10 @@ const LoginPage = () => {
       alert("Senha incorreta");
     } else {
       // Se o usuário e a senha estiverem corretos
+      setAutenticado(true)
+    }
+
+    if (autenticado) {
       location.href = "/pages/dashboard";
     }
     
