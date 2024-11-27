@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const FormProfessor = () => {
-  const [materiasSelecionadas, setMateriasSelecionadas] = useState([]);
 
   // Opções de exemplo
   const opcoes = [

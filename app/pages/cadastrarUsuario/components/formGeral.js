@@ -6,6 +6,7 @@ const formGeral = ({
   email,
   tel,
   senha,
+  endereco,
   confirmSenha,
   setNome,
   setCpf,
@@ -13,13 +14,13 @@ const formGeral = ({
   setSexo,
   setEmail,
   setSenha,
+  setEndereco,
   setConfirmSenha,
   setCargo,
   nextPage,
   handleTelefoneChange,
-  cargo
+  cargo,
 }) => {
-
   return (
     <form id="forms" action="" onSubmit={nextPage}>
       <input
@@ -68,6 +69,12 @@ const formGeral = ({
         required
       />
       <input
+        type="text"
+        placeholder="Endereço"
+        value={endereco}
+        onChange={(e) => setEndereco(e.target.value)}
+      />
+      <input
         type="password"
         placeholder="Senha:"
         value={senha}
@@ -81,7 +88,6 @@ const formGeral = ({
         onChange={(e) => setConfirmSenha(e.target.value)}
         required
       />
-
       <select
         name=""
         id=""

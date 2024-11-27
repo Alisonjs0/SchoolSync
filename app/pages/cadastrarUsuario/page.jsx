@@ -58,7 +58,7 @@ const CadastrarUsuario = () => {
   const [obs, setObs] = useState("");
 
   // Informacoes Professor
-  const [disciplina, setDisciplina] = useState("");
+  const [disciplinas, setDisciplinas] = useState("");
   const [Tipocontrato, setTipoContrato] = useState("");
 
   const { data: fetchedUsuarios, httpConfig } = useFetch(url);
@@ -103,7 +103,7 @@ const CadastrarUsuario = () => {
       case "Professor":
         dataToSend = {
           ...dataToSend, // Inclui os campos gerais
-          disciplina,
+          disciplinas,
           Tipocontrato,
         };
         break;
@@ -125,6 +125,7 @@ const CadastrarUsuario = () => {
     setSexo("selecionar");
     setObs("");
     setStage("Geral");
+    setDisciplinas([]);
   };
 
   const formatarTelefone = (telefone) => {
@@ -198,6 +199,8 @@ const CadastrarUsuario = () => {
                   sexo={sexo}
                   nome={nome}
                   tel={tel}
+                  endereco={endereco}
+                  setEndereco={setEndereco}
                   setNome={setNome}
                   setEmail={setEmail}
                   setTel={setTel}
@@ -238,7 +241,7 @@ const CadastrarUsuario = () => {
                       className="m-3 fs-4"
                     />
                   </span>
-                  <FormProfessor />
+                  <FormProfessor disciplinas={disciplinas} setDisciplinas={setDisciplinas}  />
                 </>
               )}
               {stage === "Admin" && (

@@ -1,18 +1,6 @@
 {
   "Usuarios": [
     {
-      "id": "1",
-      "usuario": "Alisonjs",
-      "nome": "Alison Jose Serafim de Lima",
-      "email": "alisonserafim.tec@gmail.com",
-      "senha": "123",
-      "tipo": "admin",
-      "dataNascimento": "22/02/2006",
-      "cpf": "160.121.624-64",
-      "numeroTel": "(81) 99122-6762",
-      "endereco": "sdfsvcvsd"
-    },
-    {
       "id": "173219534",
       "nome": "Alison José Serafim De Lima",
       "email": "alisonserafim.tec@gmail.com",
@@ -25,20 +13,6 @@
       "turma": "1°B",
       "nomeResponsavel": "yhvhdc xeujew",
       "obs": "cfvsedxwr"
-    },
-    {
-      "id": "173215211",
-      "nome": "Alison José Serafim De Lima",
-      "email": "alisonserafim.tec@gmail.com",
-      "tel": "(81) 99122-6762",
-      "cpf": "34",
-      "senha": "12",
-      "cargo": "Aluno",
-      "sexo": "Maculino",
-      "data": "2000-04-20",
-      "turma": "2°A",
-      "nomeResponsavel": "sdfcv",
-      "obs": "gefdcv"
     }
   ]
 }
