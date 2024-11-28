@@ -18,8 +18,6 @@ const LoginPage = () => {
   const {data} = useFetch(url)
   console.log(data);
 
-  const {autenticado, setAutenticado} = useGlobalContext();
-
   function Login() {
     const usuario = data.find((usuario) => usuario.id === user);
 
