@@ -29,10 +29,6 @@ const LoginPage = () => {
       alert("Senha incorreta");
     } else {
       // Se o usuário e a senha estiverem corretos
-      setAutenticado(true)
-    }
-
-    if (autenticado) {
       location.href = "/pages/dashboard";
     }
     
