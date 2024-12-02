@@ -51,7 +51,7 @@ const LoginPage = () => {
             </p>
             <input
               id="Usuario"
-              type="number"
+              type="text"
               value={user}
               onChange={(e) => setUser(e.target.value)}
             />

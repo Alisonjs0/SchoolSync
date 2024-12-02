@@ -1,7 +1,8 @@
 'use client'
 
-import "./esqueletoPrincipal/dashboardTemplate.css";
-import "./menus.css";
+import "./esqueletoPrincipal/dashboardTemplate.css"
+
+import styleMenus from "./menus.module.css";
 
 import Link from "next/link";
 
@@ -19,57 +20,57 @@ const ConteudoMenus = () => {
   return (
     <div>
       <EsqueletoPrincipal>
-        <div className={`${"conteiner"} ${"conteudoMenus"}`}>
+        <div className={`${styleMenus.conteiner} ${styleMenus.conteudoMenus}`}>
           <h3>Dashboard</h3>
           {user.tipo === "aluno" ? (
             <div>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.menus}>
                 <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </a>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.menus}>
                 <h2>Calendario Escolar</h2>
                 <p>Calendario da Instituição escolar.</p>
               </a>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.meMenusus}>
                 <h2>Horarios</h2>
                 <p>Seus horários escolares semanais.</p>
               </a>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.menus}>
                 <h2>Boletim</h2>
                 <p>Vizualize suas notas.</p>
               </a>
             </div>
           ) : user.tipo === "admin" ? (
             <div>
-              <a href="" className="menus">
+              <Link href="" className={styleMenus.menus}>
                 <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
-              </a>
-              <a href="" className="menus  menuComicon">  
+              </Link>
+              <Link href="" className={`${styleMenus.menus} ${styleMenus.menuComicon}`}>  
                 <h2>8.3</h2>
                 <p>Média Escolar</p>
-                <IoAnalytics className="menuIcon" />
-              </a>
-              <Link href="dashboard/horarios" className="menus">
+                <IoAnalytics className={styleMenus.menuIcon} />
+              </Link>
+              <Link href="dashboard/horarios" className={styleMenus.menus}>
                 <h2>Horarios</h2>
                 <p>Seus horários escolares semanais.</p>
               </Link>
             </div>
           ) : user.tipo === "professor" ? (
             <div>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.menus}>
                 <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </a>
-              <a href="" className="menus  menuComicon">
+              <a href="" className={styleMenus.menus + styleMenus.menuComicon}>
                 <h2>
                   8.3<span>^13,3%</span>
                 </h2>
                 <p>Média por turma.</p>
-                <IoAnalytics className="menuIcon" />
+                <IoAnalytics className={styleMenus.menuIcon} />
               </a>
-              <a href="" className="menus">
+              <a href="" className={styleMenus.menus}>
                 <h2>Minhas Turmas</h2>
                 <p>Ranking e edição.</p>
               </a>
