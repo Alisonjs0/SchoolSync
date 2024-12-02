@@ -1,13 +1,15 @@
 'use client'
 
-import "../esqueletoPrincipal/dashboardTemplate.css";
+import "./esqueletoPrincipal/dashboardTemplate.css";
 import "./menus.css";
 
-import { user as initialUserData } from '../data/infos';
+import Link from "next/link";
+
+import { user as initialUserData } from '../../data/infos';
 
 import { useState } from 'react'
 
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
+import EsqueletoPrincipal from "./esqueletoPrincipal/esqueleto";
 
 import { IoAnalytics } from "react-icons/io5";
 
@@ -44,15 +46,15 @@ const ConteudoMenus = () => {
                 <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </a>
-              <a href="" className="menus  menuComicon">
+              <a href="" className="menus  menuComicon">  
                 <h2>8.3</h2>
                 <p>Média Escolar</p>
                 <IoAnalytics className="menuIcon" />
               </a>
-              <a href="" className="menus">
+              <Link href="dashboard/horarios" className="menus">
                 <h2>Horarios</h2>
                 <p>Seus horários escolares semanais.</p>
-              </a>
+              </Link>
             </div>
           ) : user.tipo === "professor" ? (
             <div>

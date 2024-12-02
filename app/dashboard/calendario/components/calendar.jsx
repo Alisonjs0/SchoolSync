@@ -1,6 +1,6 @@
 "use client";
 
-import { user as initialUserData } from "../../data/infos.js";
+import { user as initialUserData } from "@/data/infos";
 import React, { useEffect, useState } from "react";
 import "./css/style.css";
 import { Calendar } from "@fullcalendar/core";
@@ -204,6 +204,7 @@ const CalendarComponent = () => {
           aria-labelledby="exampleModalLabel"
           aria-hidden={!showModal}
         >
+          
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header border-bottom-0">

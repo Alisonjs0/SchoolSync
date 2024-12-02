@@ -29,6 +29,7 @@ const FormAluno = ({turma, nomeResponsavel, obs, setObs, setTurma, setNomeRespon
           style={textArea}
           value={obs}
           onChange={(e) => setObs(e.target.value)}
+          resize="none"
         ></textarea>
         <button className="button" type="submit">Cadastrar Aluno</button>
       </form>

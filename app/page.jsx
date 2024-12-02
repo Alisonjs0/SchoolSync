@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import Link from 'next/link'
 
 const PaginaInicial = () => {
 
@@ -6,12 +7,12 @@ const PaginaInicial = () => {
         <div className={styles.paginaInicial}>
             <div className={`${styles.header} ${styles.container}`}>
                 <img className={styles.img} src="/assets/logo.png" alt="logo" />
-                <a href="./pages/login"><img className={styles.user} src="/assets/user.png" alt="" /></a>
+                <Link href="/login"><img className={styles.user} src="/assets/user.png" alt="" /></Link>
             </div>
             <main>
                 <div className={styles.banner}>
                     <img src="/assets/banner-inicial.jpg" alt="" />
-                    <a className={styles.matricula} href="./pages/preMatricula"><button>Faça sua pré-matricula</button></a>
+                    <Link className={styles.matricula} href="./pages/preMatricula"><button>Faça sua pré-matricula</button></Link>
                 </div>
                 <div className={`${styles.info} ${styles.container}`}>
                     <div className={`${styles.oneContent} ${styles.container}`}>

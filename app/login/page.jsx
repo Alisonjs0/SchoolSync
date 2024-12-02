@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 
-import { useFetch } from "@/app/hooks/useFetch";
+import { useFetch } from "@/hooks/useFetch";
 const url = "http://localhost:3000/Usuarios"
 
 import { IoMdHome } from "react-icons/io";
@@ -29,7 +29,7 @@ const LoginPage = () => {
       alert("Senha incorreta");
     } else {
       // Se o usuário e a senha estiverem corretos
-      location.href = "/pages/dashboard";
+      location.href = "/dashboard";
     }
     
   }

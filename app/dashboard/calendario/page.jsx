@@ -7,7 +7,7 @@
 'use client'
 
 import dynamic from "next/dynamic";
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
+import EsqueletoPrincipal from "../esqueletoPrincipal/esqueleto";
 
 import "./calendario.css"
 

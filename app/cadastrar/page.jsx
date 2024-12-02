@@ -1,14 +1,14 @@
 "use client";
 
 // Componentes
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
+import EsqueletoPrincipal from "../dashboard/esqueletoPrincipal/esqueleto";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
 import FormAdmin from "./components/formAdmin.js";
 import FormGeral from "./components/formGeral.js";
 
 // Dados Usuario
-import { user as initialUserData } from "../data/infos.js";
+import { user as initialUserData } from "../../data/infos.js";
 
 // Gerar id unico
 import { v4 as uuidv4 } from "uuid";
@@ -18,7 +18,7 @@ import "./cadastrarUsuario.css";
 
 // HOOKS
 import { useState, useEffect } from "react";
-import { useFetch } from "../../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch.js";
 
 // Icons
 import { IoIosReturnLeft } from "react-icons/io";

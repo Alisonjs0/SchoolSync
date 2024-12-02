@@ -1,4 +1,4 @@
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
+import EsqueletoPrincipal from "../esqueletoPrincipal/esqueleto";
 import "./horario.css";
 
 const Horarios = () => {
