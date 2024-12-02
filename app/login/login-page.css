@@ -22,6 +22,17 @@
     gap: 8px;
 }
 
+.senhaInput {
+    position: relative;
+}
+
+.senhaInput span {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 16px;
+}
+
 .conteudo {
     margin: auto;
 }
