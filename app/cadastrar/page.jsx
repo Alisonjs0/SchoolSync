@@ -2,13 +2,15 @@
 
 // Componentes
 import EsqueletoPrincipal from "../.components/esqueleto";
-import FormAluno from "./components/formAluno.js";
-import FormProfessor from "./components/formProfessor.js";
-import FormAdmin from "./components/formAdmin.js";
-import FormGeral from "./components/formGeral.js";
+import FormAluno from "@/app/.components/formAluno";
+import FormProfessor from "@/app/.components/formProfessor";
+import FormAdmin from "@/app/.components/formAdmin";
+import FormGeral from "@/app/.components/formGeral";
 
 // Dados Usuario
-import { user as initialUserData } from "../../data/infos.js";
+import { user as initialUserData } from "@/data/infos";
+
+import Swal from 'sweetalert2';
 
 // Gerar id unico
 import { v4 as uuidv4 } from "uuid";
@@ -18,7 +20,7 @@ import "./cadastrarUsuario.css";
 
 // HOOKS
 import { useState, useEffect } from "react";
-import { useFetch } from "../../hooks/useFetch.js";
+import { useFetch } from "@/hooks/useFetch";
 
 // Icons
 import { IoIosReturnLeft } from "react-icons/io";
@@ -74,8 +76,15 @@ const CadastrarUsuario = () => {
     if (turma === "" || nomeResponsavel === "") {
       alert("Por favor, preencha todos os campos.");
       return;
+    } else {
+      Swal.fire({
+        title: 'Sucesso!',
+        text: 'Novo usuario cadastrado!',
+        icon: 'success',
+        timer: 1500, // 1,5 segundos
+        timerProgressBar: true,
+      });
     }
-
     let dataToSend = {
       nome,
       email,

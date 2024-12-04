@@ -2,7 +2,7 @@
 
 import { user as initialUserData } from "@/data/infos";
 import React, { useEffect, useState } from "react";
-import "./css/style.css";
+import "./style/calendario.css";
 import { Calendar } from "@fullcalendar/core";
 import ptBrLocale from "@fullcalendar/core/locales/pt-br";
 import dayGridPlugin from "@fullcalendar/daygrid";

@@ -32,7 +32,7 @@ const ConteudoMenus = () => {
                 <h2>Calendario Escolar</h2>
                 <p>Calendario da Instituição escolar.</p>
               </a>
-              <a href="" className={styleMenus.meMenusus}>
+              <a href="" className={styleMenus.menus}>
                 <h2>Horarios</h2>
                 <p>Seus horários escolares semanais.</p>
               </a>
