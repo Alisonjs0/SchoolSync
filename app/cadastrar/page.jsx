@@ -1,7 +1,7 @@
 "use client";
 
 // Componentes
-import EsqueletoPrincipal from "../dashboard/esqueletoPrincipal/esqueleto";
+import EsqueletoPrincipal from "../.components/esqueleto";
 import FormAluno from "./components/formAluno.js";
 import FormProfessor from "./components/formProfessor.js";
 import FormAdmin from "./components/formAdmin.js";

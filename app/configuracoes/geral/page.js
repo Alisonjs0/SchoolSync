@@ -1,7 +1,7 @@
-import EsqueletoPrincipal from '../esqueletoPrincipal/page.jsx'
-import "./configuracoesGeral.css"
+import EsqueletoPrincipal from '@/app/.components/esqueleto'
+import "./geral.css"
 
-const ConfiguracoesGeral = () => {
+const Geral = () => {
     return (
         <EsqueletoPrincipal>
             <h3>Configurações</h3>
@@ -63,4 +63,4 @@ const ConfiguracoesGeral = () => {
 
 }
 
-export default ConfiguracoesGeral
+export default Geral

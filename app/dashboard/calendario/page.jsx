@@ -7,11 +7,11 @@
 'use client'
 
 import dynamic from "next/dynamic";
-import EsqueletoPrincipal from "../esqueletoPrincipal/esqueleto";
+import EsqueletoPrincipal from "@/app/.components/esqueleto";
 
 import "./calendario.css"
 
-const CalendarComponent = dynamic(() => import("./components/calendar.jsx"), {
+const CalendarComponent = dynamic(() => import("@/app/.components/calendario"), {
   ssr: true, // Desativa SSR para esse componente
 });
 

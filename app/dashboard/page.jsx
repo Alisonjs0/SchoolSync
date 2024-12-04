@@ -1,16 +1,16 @@
 'use client'
 
-import "./esqueletoPrincipal/dashboardTemplate.css"
+import "@/app/.components/style/dashboardTemplate.css";
 
 import styleMenus from "./menus.module.css";
 
 import Link from "next/link";
 
-import { user as initialUserData } from '../../data/infos';
+import { user as initialUserData } from '@/data/infos';
 
 import { useState } from 'react'
 
-import EsqueletoPrincipal from "./esqueletoPrincipal/esqueleto";
+import EsqueletoPrincipal from "@/app/.components/esqueleto";
 
 import { IoAnalytics } from "react-icons/io5";
 

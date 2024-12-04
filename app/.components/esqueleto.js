@@ -1,7 +1,7 @@
 "use client"; // Para fazer o site rodar no cliente e manipular o DOM
 
-import "./dashboardTemplate.css" // Importação do CSS
-import ConteudoMenuLateral from "./conteudoMenuLateral";
+import "./style/dashboardTemplate.css" // Importação do CSS
+import ConteudoMenuLateral from "./menuLateral";
 
 import { useState } from "react"; // useState para atualização dos dados em tempo real na tela
 

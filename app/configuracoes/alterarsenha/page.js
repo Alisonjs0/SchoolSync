@@ -1,7 +1,7 @@
-import EsqueletoPrincipal from '../esqueletoPrincipal/page.jsx'
-import "./alterarsenhapt1.css"
+import EsqueletoPrincipal from '@/app/.components/esqueleto'
+import "./alterarsenha.css"
 
-const AlterarSenhaPt1 = () => {
+const AlterarSenha = () => {
     return (
         <EsqueletoPrincipal>
             <h3>Configurações</h3>
@@ -40,4 +40,4 @@ const AlterarSenhaPt1 = () => {
     )
 }
 
-export default AlterarSenhaPt1
+export default AlterarSenha

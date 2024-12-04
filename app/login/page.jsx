@@ -9,8 +9,11 @@ import { IoMdHome } from "react-icons/io";
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import "./login-page.css";
 
+import { user as initialUserData } from '@/data/infos';
+
 const LoginPage = () => {
   const router = useRouter();
+  const [infos, setInfos] = useState(initialUserData);
   const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
   const [lembrarSenha, setLembrarSenha] = useState(false);
@@ -21,6 +24,7 @@ const LoginPage = () => {
   const toggleMostrarSenha = () => {
     setMostrarSenha(!mostrarSenha);
   };
+  
 
   function Login() {
     const usuario = data.find((usuario) => usuario.id === user);

@@ -1,4 +1,4 @@
-import "./dashboardTemplate.css"
+import "./style/dashboardTemplate.css"
 
 import { user as initialUserData } from '@/data/infos';
 
