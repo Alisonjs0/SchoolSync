@@ -7,7 +7,7 @@
       "tel": "(81) 99122-6762",
       "cpf": "1213432",
       "senha": "123",
-      "cargo": "Aluno",
+      "cargo": "Admin",
       "sexo": "Maculino",
       "data": "2006-02-22",
       "turma": "1°B",
@@ -16,11 +16,13 @@
     },
     {
       "id": "Marcos",
-      "senha": "123"
+      "nome": "Marcos",
+      "senha": "123",
+      "cargo": "Admin"
     },
     {
       "id": "173350715",
-      "nome": "ALIONEIDE SERAFIM DE LIMA",
+      "nome": "Alioneide SERAFIM DE LIMA",
       "email": "zalisonkiller777@gmail.com",
       "tel": "(81) 99122-6762",
       "cpf": "1234e2",
