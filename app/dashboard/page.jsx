@@ -1,5 +1,8 @@
 'use client'
 
+import { useContext } from "react";
+import { DataContext } from "../.context/DataContext";
+
 import "@/app/.components/style/dashboardTemplate.css";
 
 import styleMenus from "./menus.module.css";
@@ -15,17 +18,22 @@ import EsqueletoPrincipal from "@/app/.components/esqueleto";
 import { IoAnalytics } from "react-icons/io5";
 
 const ConteudoMenus = () => {
-  const [user, setUser] = useState(initialUserData);
+  const { userData } = useContext(DataContext)
+
+  const [user, setUser] = useState(initialUserData)
+  
+
+  console.log(userData)
 
   return (
     <div>
       <EsqueletoPrincipal>
         <div className={`${styleMenus.conteiner} ${styleMenus.conteudoMenus}`}>
           <h3>Dashboard</h3>
-          {user.tipo === "aluno" ? (
+          {userData.cargo === "Aluno" ? (
             <div>
               <a href="" className={styleMenus.menus}>
-                <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
+                <h2>Seja bem vindo, {userData.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </a>
               <a href="" className={styleMenus.menus}>
@@ -41,10 +49,10 @@ const ConteudoMenus = () => {
                 <p>Vizualize suas notas.</p>
               </a>
             </div>
-          ) : user.tipo === "admin" ? (
+          ) : userData.cargo === "Admin" ? (
             <div>
               <Link href="" className={styleMenus.menus}>
-                <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
+                <h2>Seja bem vindo, {userData.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </Link>
               <Link href="" className={`${styleMenus.menus} ${styleMenus.menuComicon}`}>  
@@ -57,10 +65,10 @@ const ConteudoMenus = () => {
                 <p>Seus horários escolares semanais.</p>
               </Link>
             </div>
-          ) : user.tipo === "professor" ? (
+          ) : userData.cargo === "Professor" ? (
             <div>
               <a href="" className={styleMenus.menus}>
-                <h2>Seja bem vindo, {user.nome.split(" ")[0]} </h2>
+                <h2>Seja bem vindo, {userData.nome.split(" ")[0]} </h2>
                 <p>SchoolSync Dashboard.</p>
               </a>
               <a href="" className={styleMenus.menus + styleMenus.menuComicon}>
