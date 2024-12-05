@@ -7,6 +7,7 @@ const PaginaInicial = () => {
         <div className={styles.paginaInicial}>
             <div className={`${styles.header} ${styles.container}`}>
                 <img className={styles.img} src="/assets/logo.png" alt="logo" />
+                
                 <Link href="/login"><img className={styles.user} src="/assets/user.png" alt="" /></Link>
             </div>
             <main>

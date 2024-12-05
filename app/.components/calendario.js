@@ -1,7 +1,6 @@
 "use client";
 
-import { user as initialUserData } from "@/data/infos";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./style/calendario.css";
 import { Calendar } from "@fullcalendar/core";
 import ptBrLocale from "@fullcalendar/core/locales/pt-br";
@@ -11,10 +10,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
 
+import { DataContext } from "../.context/DataContext";
+
 moment.locale("pt-br");
 
 const CalendarComponent = () => {
-  const [user, setUser] = useState(initialUserData);
+  const { userData } = useContext(DataContext);
+
   const [calendar, setCalendar] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -78,7 +80,7 @@ const CalendarComponent = () => {
         },
       },
       headerToolbar:
-        user.tipo === "admin"
+        userData.cargo === "Admin"
           ? { center: "addEventButton", right: "todayButton,prev,next" }
           : { right: "todayButton,prev,next" },
       events: events,

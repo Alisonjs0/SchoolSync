@@ -1,8 +1,10 @@
 import "./style/dashboardTemplate.css"
 
-import { user as initialUserData } from '@/data/infos';
 
-import { useState } from 'react'
+import { DataContext } from "../.context/DataContext";
+
+
+import { useState, useContext } from 'react'
 
 import Link from 'next/link'
 
@@ -14,14 +16,14 @@ import { FaUserPlus, FaBookOpen } from "react-icons/fa6";
 
 const ConteudoMenuLateral = () => {
 
-    const [user, setUser] = useState(initialUserData)
+    const { userData } = useContext(DataContext);
     
   return (
     <div>
         <div id="menuLateral" className="menuLateral">
             <nav>
                 <ul className="listaLateral container">
-                    {user.tipo === "professor" ? (
+                    {userData.cargo === "Professor" ? (
                         <div>
                             <li><Link href="/dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></Link></li>
                             <li><Link href="/dashboard/calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></Link></li>
@@ -29,7 +31,7 @@ const ConteudoMenuLateral = () => {
                             <li><Link href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></Link></li>
                             <li><Link href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></Link></li>
                         </div>
-                    ) : user.tipo === "admin" ? (
+                    ) : userData.cargo === "Admin" ? (
                         <div>
                             <li><Link href="/dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></Link></li>
                             <li><Link href="/dashboard/calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></Link></li>
@@ -38,7 +40,7 @@ const ConteudoMenuLateral = () => {
                             <li><Link href=""><FaComments className="iconMenuLateral" /> <p>Contato e suporte</p></Link></li>
                             <li><Link href=""><IoMdSettings className="iconMenuLateral" /> <p>Configurações</p></Link></li>
                         </div>
-                    ) : user.tipo === "aluno" ? (
+                    ) : userData.cargo === "Aluno" ? (
                         <div>
                             <li><Link href="/dashboard"><MdDashboard className="iconMenuLateral" /> <p>Dashboard</p></Link></li>
                             <li><Link href="/dashboard/calendario"><IoCalendar className="iconMenuLateral" /> <p>Calendario Escolar</p></Link></li>

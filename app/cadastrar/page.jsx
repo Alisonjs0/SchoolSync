@@ -190,7 +190,7 @@ const CadastrarUsuario = () => {
 
   return (
     <div>
-      {user.tipo === "admin" && (
+      {user.cargo === "Admin" && (
         <EsqueletoPrincipal>
           <div className="conteiner conteudoMenus">
             <h3 style={{ paddingTop: stage !== "Geral" ? "20px" : "0px" }}>
