@@ -1,42 +1,59 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useFetch } from "@/hooks/useFetch";
+import { useContext } from "react";
+import { DataContext } from "../.context/DataContext";
+import { useRouter } from 'next/navigation'
+
 const url = "http://localhost:3000/Usuarios";
 
 import { IoMdHome } from "react-icons/io";
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import "./login-page.css";
 
-import { user as initialUserData } from '@/data/infos';
 
 const LoginPage = () => {
+
   const router = useRouter();
-  const [infos, setInfos] = useState(initialUserData);
+
+  const { userData, setUserData } = useContext(DataContext);
+
   const [user, setUser] = useState("");
   const [senha, setSenha] = useState("");
   const [lembrarSenha, setLembrarSenha] = useState(false);
   const [mostrarSenha, setMostrarSenha] = useState(false);
   const { data } = useFetch(url);
-  console.log(data);
 
   const toggleMostrarSenha = () => {
     setMostrarSenha(!mostrarSenha);
   };
-  
 
   function Login() {
     const usuario = data.find((usuario) => usuario.id === user);
 
     if (!usuario) {
       alert("Usuário não encontrado");
-    } else if (usuario.senha !== senha) {
+      return;
+    }
+  
+    if (usuario.senha !== senha) {
       alert("Senha incorreta");
-    } else {
+      return;
+    }
+  
+    setUserData({ ...usuario, logado: true });
+  }
+  
+  // Monitora mudanças no estado userData
+  useEffect(() => {
+    if (userData?.logado) {
+      console.log("Usuário autenticado:", userData);
       location.href = "/dashboard";
     }
-  }
+  }, [userData]);
+
+
 
   return (
     <div className="Login">
