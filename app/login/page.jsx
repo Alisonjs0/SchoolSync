@@ -74,6 +74,7 @@ const LoginPage = () => {
             </p>
             <input
               id="Usuario"
+              className="form-control bg-transparent"
               type="text"
               value={user}
               onChange={(e) => setUser(e.target.value)}
@@ -85,6 +86,7 @@ const LoginPage = () => {
             </p>
             <div className="senhaInput">
               <input
+                className="form-control bg-transparent" 
                 id="Senha"
                 type={mostrarSenha ? "text" : "password"}
                 value={senha}
