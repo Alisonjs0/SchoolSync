@@ -1,4 +1,4 @@
-import EsqueletoPrincipal from "../esqueletoPrincipal/page.jsx";
+import EsqueletoPrincipal from "@/app/.components/esqueleto";
 import "./boletim.css";
 
 const BoletimEscolar = () => {
