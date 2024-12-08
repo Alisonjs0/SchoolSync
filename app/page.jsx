@@ -13,7 +13,7 @@ const PaginaInicial = () => {
             <main>
                 <div className={styles.banner}>
                     <img src="/assets/banner-inicial.jpg" alt="" />
-                    <Link className={styles.matricula} href="./pages/preMatricula"><button>Faça sua pré-matricula</button></Link>
+                    <Link className={styles.matricula} href="/PreMatricula"><button>Faça sua pré-matricula</button></Link>
                 </div>
                 <div className={`${styles.info} ${styles.container}`}>
                     <div className={`${styles.oneContent} ${styles.container}`}>
