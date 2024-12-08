@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { DataContext } from "../.context/DataContext";
 import { useRouter } from 'next/navigation'
 
-const url = "http://localhost:3000/Usuarios";
+const url = "https://json-teste-ten.vercel.app/";
 
 import { IoMdHome } from "react-icons/io";
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
