@@ -268,7 +268,7 @@ const CadastrarUsuario = () => {
           </div>
         </EsqueletoPrincipal>
       )}
-      {user.tipo !== "admin" && (
+      {user.cargo !== "Admin" && (
         <div className="alert alert-danger" role="alert">
           Acesso negado!
         </div>
