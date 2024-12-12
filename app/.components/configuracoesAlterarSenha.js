@@ -2,7 +2,7 @@ import ButtonsFooter from "./buttonsFooter";
 
 const configuracoesAlterarSenha = () => {
   return (
-    <div className="conteudo">
+    <div className="config">
       <label>
         <span>Senha Atual</span>
         <input type="text" />

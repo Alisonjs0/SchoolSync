@@ -1,10 +1,5 @@
 .conteudoMenus {
-    height: 100%;
     margin-bottom: 100px;
-}
-
-.conteudoMenus h3 {
-    padding: 30px 0 20px 0;
 }
 
 .configuracoes {
@@ -39,17 +34,17 @@
     margin: 0 38px; /* Espaço antes da linha */
 }
 
-.conteudo {
+.config {
     width: 100%;
 }
 
-.conteudo header {
+.config header {
     display: flex;
     gap: 40px;
     margin-bottom: 20px;
 }
 
-.conteudo header button {
+.config header button {
     height: 20%;
     border-radius: 5px;
     padding: 5px;
@@ -59,24 +54,24 @@
     font-weight: 400;
 }
 
-.conteudo label {
+.config label {
     display: grid;
     margin-bottom: 12px;
 }
 
-.conteudo label span {
+.config label span {
     font-size: 14px;
     font-weight: 500;
 }
 
-.conteudo label input {
+.config label input {
     background: transparent;
     border: 1px solid #0000003b;
     border-radius: 5px;
     padding: 2px 5px;
 }
 
-.conteudo label textarea {
+.config label textarea {
     resize: none;
     background: transparent;
     border: 1px solid #0000003b;
@@ -123,13 +118,13 @@ input[type=checkbox] {
     text-decoration: underline;
 }
 
-.conteudo footer {
+.config footer {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
 }
 
-.conteudo footer button {
+.config footer button {
     height: 20%;
     border-radius: 5px;
     padding: 5px;
@@ -139,7 +134,7 @@ input[type=checkbox] {
     font-weight: 400;
 }
 
-.conteudo footer .salvar {
+.config footer .salvar {
     background: #0E4C8C;
     color: white;
     width: 80px;

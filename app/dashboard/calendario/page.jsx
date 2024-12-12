@@ -21,9 +21,7 @@ export default function Page() {
       <EsqueletoPrincipal>
         <div className="conteiner conteudoMenus">
           <h3 className="titulo">Calendario Escolar</h3>
-          <div className="conteudo">
             <CalendarComponent></CalendarComponent>
-          </div>
         </div>
       </EsqueletoPrincipal>
     </div>

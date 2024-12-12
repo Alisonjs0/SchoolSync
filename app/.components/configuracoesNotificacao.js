@@ -2,7 +2,7 @@ import ButtonsFooter from "./buttonsFooter";
 
 const ConfiguracoesNotificacao = () => {
   return (
-    <div className="conteudo conteudoCheck">
+    <div className="config conteudoCheck">
       <div className="check">
         <input className="form-check-input" type="checkbox" />
         <span>Envie-me um e-mail quando houver atualização nas notas</span>

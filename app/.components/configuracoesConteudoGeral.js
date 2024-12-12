@@ -2,7 +2,7 @@ import ButtonsFooter from "./buttonsFooter";
 
 const ConfiguracoesConteudoGeral = () => {
   return (
-    <div className="conteudo">
+    <div className="config">
         <header>
                     <img src="/assets/usuario.png" alt="" />
                     <button>Trocar Imagem</button>
