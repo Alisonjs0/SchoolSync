@@ -24,6 +24,11 @@
     gap: 10px;
 }
 
+.configuracoes nav div {
+    width: fit-content;
+    cursor: pointer;
+}
+
 .configuracoes .linha::after {
     content: "";
     width: 2px;
@@ -54,29 +59,50 @@
     font-weight: 400;
 }
 
-.conteudo main label {
+.conteudo label {
     display: grid;
     margin-bottom: 12px;
 }
 
-.conteudo main label span {
+.conteudo label span {
     font-size: 14px;
     font-weight: 500;
 }
 
-.conteudo main label input {
+.conteudo label input {
     background: transparent;
     border: 1px solid #0000003b;
     border-radius: 5px;
     padding: 2px 5px;
 }
 
-.conteudo main label textarea {
+.conteudo label textarea {
     resize: none;
     background: transparent;
     border: 1px solid #0000003b;
     border-radius: 5px;
     padding: 2px 5px;
+}
+
+.check {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.check span {
+    margin-top: .5%;
+}
+
+.check input {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox] {
+    accent-color: #0E4C8C;
+
 }
 
 .recuperar {
@@ -99,7 +125,7 @@
 
 .conteudo footer {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 20px;
 }
 
@@ -118,4 +144,9 @@
     color: white;
     width: 80px;
     font-weight: 400;
+}
+
+.active {
+    border-bottom: 1px solid #0000003b;
+    
 }
