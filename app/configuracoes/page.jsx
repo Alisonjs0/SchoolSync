@@ -16,7 +16,7 @@ const Geral = () => {
     <div>
       <EsqueletoPrincipal>
         <div className={"conteiner conteudoMenus"}>
-          <h3>Configurações</h3>
+          <h3 className={stage === "Geral" ? "geralPage" : ""}>Configurações</h3>
           <div className="configuracoes">
             <NavConfiguracoes stage={stage} setStage={setStage}/>
             <span className="linha"></span>
