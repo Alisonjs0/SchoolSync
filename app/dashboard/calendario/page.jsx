@@ -11,7 +11,7 @@ import EsqueletoPrincipal from "@/app/.components/esqueleto";
 
 import "./calendario.css"
 
-const CalendarComponent = dynamic(() => import("@/app/.components/calendario"), {
+const CalendarComponent = dynamic(() => import("@/app/.components/calendario/calendario"), {
   ssr: true, // Desativa SSR para esse componente
 });
 

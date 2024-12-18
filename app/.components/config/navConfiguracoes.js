@@ -1,5 +1,4 @@
-import Link from "next/link";
-import "../configuracoes/geral.css";
+import "../../configuracoes/geral.css";
 
 export default function NavConfiguracoes({ stage, setStage }) {
   return (

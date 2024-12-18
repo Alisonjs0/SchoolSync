@@ -2,10 +2,10 @@
 
 // Componentes
 import EsqueletoPrincipal from "../.components/esqueleto";
-import FormAluno from "@/app/.components/formAluno";
-import FormProfessor from "@/app/.components/formProfessor";
-import FormAdmin from "@/app/.components/formAdmin";
-import FormGeral from "@/app/.components/formGeral";
+import FormAluno from "@/app/.components/cadastrar/formAluno";
+import FormProfessor from "@/app/.components/cadastrar/formProfessor";
+import FormAdmin from "@/app/.components/cadastrar/formAdmin";
+import FormGeral from "@/app/.components/cadastrar/formGeral";
 
 // Dados Usuario
 import { user as initialUserData } from "@/data/infos";

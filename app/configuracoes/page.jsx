@@ -1,10 +1,10 @@
 "use client";
 
 import EsqueletoPrincipal from "@/app/.components/esqueleto";
-import NavConfiguracoes from "../.components/navConfiguracoes";
-import ConfiguracoesConteudoGeral from "../.components/configuracoesConteudoGeral";
-import ConfiguracoesAlterarSenha from "../.components/configuracoesAlterarSenha";
-import ConfiguracoesNotificacao from "../.components/configuracoesNotificacao"
+import NavConfiguracoes from "../.components/config/navConfiguracoes";
+import ConfiguracoesConteudoGeral from "../.components/config/configuracoesConteudoGeral";
+import ConfiguracoesAlterarSenha from "../.components/config/configuracoesAlterarSenha";
+import ConfiguracoesNotificacao from "../.components/config/configuracoesNotificacao"
 import "./geral.css";
 import { useState } from "react";
 

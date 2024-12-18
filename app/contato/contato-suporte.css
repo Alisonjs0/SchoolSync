@@ -15,7 +15,7 @@
 .contato input {
     width: 80%;
     height: 3rem;
-    background: #e4e4e4;
+    background: transparent;
     border: 1px solid #0000003b;
     border-radius: 10px;
     padding: 0 10px;
@@ -24,7 +24,7 @@
 .contato textarea {
     width: 80%;
     height: 7rem;
-    background: #e4e4e4;
+    background: transparent;
     border: 1px solid #0000003b;
     border-radius: 10px;
     padding: 10px;

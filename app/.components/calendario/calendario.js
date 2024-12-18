@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useContext } from "react";
-import "./style/calendario.css";
+import "../style/calendario.css";
 import { Calendar } from "@fullcalendar/core";
 import ptBrLocale from "@fullcalendar/core/locales/pt-br";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { v4 as uuidv4 } from "uuid";
 import moment from "moment";
 
-import { DataContext } from "../.context/DataContext";
+import { DataContext } from "@/app/.context/DataContext";
 
 moment.locale("pt-br");
 
