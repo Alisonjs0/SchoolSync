@@ -341,7 +341,7 @@ const Turmas = () => {
               {stage === "DetalhesTurma" && (
                 <DetalhesTurmas turma={turmaClicada} voltar={setStage} setInfoAluno={setInfoAluno}/>
               )}
-              {stage === "InfoAluno" && <InfoAluno infoAluno={infoAluno} voltar={setStage}/>}
+              {stage === "InfoAluno" && <InfoAluno infoAluno={infoAluno} voltar={setStage} setInfoAluno={setInfoAluno}/>}
             </div>
           </div>
         </EsqueletoPrincipal>

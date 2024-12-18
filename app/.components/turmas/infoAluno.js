@@ -1,4 +1,8 @@
-const InfoAluno = ({ voltar, infoAluno }) => {
+const InfoAluno = ({ voltar, infoAluno, setInfoAluno }) => {
+    const retornar = () => {
+        voltar("DetalhesTurma");
+        setInfoAluno(null);
+    }
   return (
     <>
       <div className="perfilAluno">

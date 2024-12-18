@@ -1,4 +1,5 @@
 const DetalhesTurma = ({ turma, voltar, setInfoAluno }) => {
+
   return (
     <>
       <h4 className="TituloTurma">
