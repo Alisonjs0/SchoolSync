@@ -5,8 +5,8 @@ const turmas = ({turmas, setTurmaClicada}) => {
       <ul className="tumasHeader">
         <li>
           <span>Turma</span>
-          <span>Periodo</span>
-          <span>Quantidade</span>
+          <span>Turno</span>
+          <span>Quant. alunos</span>
         </li>
       </ul>
       <ul className="turmas">

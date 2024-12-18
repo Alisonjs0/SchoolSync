@@ -43,15 +43,43 @@ nav {
 
 .listaAlunos {
   list-style: none;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 1rem 0;
+  gap: 8px;
+  padding: 0;
+  margin: auto;
 }
 
 .listaAlunos li {
   background: #1e5f9d;
   color: aliceblue;
   padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 2px 0px #00000063;
+}
 
+.TituloTurma {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2% 0;
+  font-size: 20px;
+}
+
+.imagem {
+  width: 100px;
+  height: 100px;
+  background: #505050fd;
+}
+
+.perfilAluno {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.infoAluno {
+  display: flex;
+  flex-direction: column;
+  line-height: 16px;
 }
