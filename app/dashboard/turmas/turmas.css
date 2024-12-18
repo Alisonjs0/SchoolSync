@@ -1,0 +1,57 @@
+.conteudo {
+  box-shadow: 0px 4px 4px 0px #0000003b;
+  border-radius: 0 0 10px 10px;
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.tumasHeader, .turmas {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tumasHeader li, .turmas li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.turmas {
+  gap: 12px;
+}
+
+.turmas li {
+  background-color: #1e5f9d; 
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 2px 0px #00000063;
+  cursor: pointer;
+}
+
+.turmas li span, .tumasHeader li span {
+  flex: 1;
+  text-align: center; 
+}
+
+.listaAlunos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem 0;
+}
+
+.listaAlunos li {
+  background: #1e5f9d;
+  color: aliceblue;
+  padding: 8px 16px;
+
+}
