@@ -334,7 +334,7 @@ const Turmas = () => {
             {stage === "DetalhesTurma" && <h3>Lista de Alunos</h3>}
             {stage === "InfoAluno" && <h3>Detalhes de Aluno</h3>}
 
-            <div className="conteudo">
+            <div className="secaoTurmas">
               {stage === "ListaTurmas" && (
                 <PageTurmas setTurmaClicada={setTurmaClicada} turmas={turmas} />
               )}

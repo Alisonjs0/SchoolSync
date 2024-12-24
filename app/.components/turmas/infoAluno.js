@@ -1,7 +1,7 @@
 const InfoAluno = ({ voltar, infoAluno, setInfoAluno }) => {
     const retornar = () => {
         voltar("DetalhesTurma");
-        setInfoAluno(null);
+        setInfoAluno("");
     }
   return (
     <>
@@ -37,7 +37,7 @@ const InfoAluno = ({ voltar, infoAluno, setInfoAluno }) => {
         </table>
       </div>
 
-      <button onClick={() => voltar("DetalhesTurma")}>Voltar</button>
+      <button onClick={retornar}>Voltar</button>
     </>
   );
 };
