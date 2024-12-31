@@ -10,7 +10,7 @@ import FormGeral from "@/app/.components/cadastrar/formGeral";
 // Dados Usuario
 import { user as initialUserData } from "@/data/infos";
 
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 // Gerar id unico
 import { v4 as uuidv4 } from "uuid";
@@ -36,7 +36,7 @@ const CadastrarUsuario = () => {
 
   // Criando id unico
   const uuid = uuidv4();
-  const numericId = uuid.replace(/\D/g, "").substring(0, 5); 
+  const numericId = uuid.replace(/\D/g, "").substring(0, 5);
   const timestamp = Date.now().toString().substring(0, 4);
   const uniqueNumericId = `${timestamp}${numericId}`;
 
@@ -78,9 +78,9 @@ const CadastrarUsuario = () => {
       return;
     } else {
       Swal.fire({
-        title: 'Sucesso!',
-        text: 'Novo usuario cadastrado!',
-        icon: 'success',
+        title: "Sucesso!",
+        text: "Novo usuario cadastrado!",
+        icon: "success",
         timer: 1500, // 1,5 segundos
         timerProgressBar: true,
       });
@@ -188,6 +188,14 @@ const CadastrarUsuario = () => {
     setStage("Geral");
   };
 
+  const [cep, setCep] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [estado, setEstado] = useState("");
+  const [erro, setErro] = useState("");
+  const [classAtiva, setClassAtiva] = useState(false);
+  const [classeErrorAtiva, setClasseErrorAtiva] = useState(false);
+  const [classePAtiva, setClassePAtiva] = useState(false);
+
   return (
     <div>
       {user.cargo === "Admin" && (
@@ -220,6 +228,21 @@ const CadastrarUsuario = () => {
                   setSexo={setSexo}
                   setData={setData}
                   handleTelefoneChange={handleTelefoneChange}
+                  cep={cep}
+                  setCep={setCep}
+                  cidade={cidade}
+                  setCidade={setCidade}
+                  estado={estado}
+                  setEstado={setEstado}
+                  erro={erro}
+                  setErro={setErro}
+                  classAtiva={classAtiva}
+                  setClassAtiva={setClassAtiva}
+                  classeErrorAtiva={classeErrorAtiva}
+                  setClasseErrorAtiva={setClasseErrorAtiva}
+                  classePAtiva={classePAtiva}
+                  setClassePAtiva={setClassePAtiva}
+
                 />
               )}
               {stage === "Aluno" && (
@@ -250,7 +273,16 @@ const CadastrarUsuario = () => {
                       className="m-3 fs-4"
                     />
                   </span>
-                  <FormProfessor disciplinas={disciplinas} setDisciplinas={setDisciplinas}  />
+                  <FormProfessor
+                    cep={cep}
+                    setCep={setCep}
+                    cidade={cidade}
+                    setCidade={setCidade}
+                    estado={estado}
+                    setEstado={setEstado}
+                    erro={erro}
+                    setErro={setErro}
+                  />
                 </>
               )}
               {stage === "Admin" && (

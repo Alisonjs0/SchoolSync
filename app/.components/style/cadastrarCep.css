@@ -1,0 +1,49 @@
+.inputContainer {
+    width: 50%;
+    height: 40px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    font-size: 15px;
+}
+
+.inputContainer input {
+    width: 80%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.inputContainer button {
+    width: 20%;
+    height: 40px;
+    border: none;
+    background: #0E4C8C;
+    color: #fff;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.cepInfoHidden {
+    display: none;
+}
+
+.cepSection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 10px;
+}
+
+.cepSection input {
+    background: transparent;
+    padding-left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    height: 40px;
+    width: 48%;
+}

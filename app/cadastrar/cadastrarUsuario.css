@@ -24,7 +24,7 @@
     padding-top: 5%;
 }
 
-#forms > *:not(button) {
+#forms > *:not(button, div) {
     width: 50%;
     height: 40px;
     background: transparent;

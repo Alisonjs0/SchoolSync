@@ -1,3 +1,5 @@
+import FormCep from "../../.components/cadastrar/formCep";
+
 const formGeral = ({
   nome,
   cpf,
@@ -20,6 +22,20 @@ const formGeral = ({
   nextPage,
   handleTelefoneChange,
   cargo,
+  cep,
+  setCep,
+  cidade,
+  setCidade,
+  estado,
+  setEstado,
+  erro,
+  setErro,
+  classAtiva,
+  setClassAtiva,
+  classeErrorAtiva,
+  setClasseErrorAtiva,
+  classePAtiva,
+  setClassePAtiva
 }) => {
   return (
     <form id="forms" action="" onSubmit={nextPage}>
@@ -59,7 +75,6 @@ const formGeral = ({
         placeholder="Email:"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
-        required
       />
       <input
         type="tel"
@@ -68,11 +83,23 @@ const formGeral = ({
         onChange={handleTelefoneChange}
         required
       />
-      <input
-        type="text"
-        placeholder="Endereço"
-        value={endereco}
-        onChange={(e) => setEndereco(e.target.value)}
+      <FormCep
+        cep={cep}
+        setCep={setCep}
+        cidade={cidade}
+        setCidade={setCidade}
+        estado={estado}
+        setEstado={setEstado}
+        erro={erro}
+        setErro={setErro}
+        classAtiva={classAtiva}
+        setClassAtiva={setClassAtiva}
+        classeErrorAtiva={classeErrorAtiva}
+        setClasseErrorAtiva={setClasseErrorAtiva}
+        classePAtiva={classePAtiva}
+        setClassePAtiva={setClassePAtiva}
+        endereco={endereco}
+        setEndereco={setEndereco}
       />
       <input
         type="password"
