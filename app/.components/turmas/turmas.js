@@ -1,7 +1,10 @@
-const turmas = ({turmas, setTurmaClicada}) => {
+const turmas = ({ turmas, setTurmaClicada, mudarPage}) => {
 
   return (
     <nav>
+      <div className="CadastrarTurma">
+        <button onClick={() => mudarPage("CadastrarTurma")}>Cadastrar nova Turma</button>
+      </div>
       <ul className="tumasHeader">
         <li>
           <span>Turma</span>

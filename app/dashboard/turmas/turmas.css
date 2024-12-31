@@ -1,6 +1,7 @@
 .secaoTurmas {
   box-shadow: 0px 4px 4px 0px #0000003b;
   border-radius: 0 0 10px 10px;
+  padding-bottom: 5%;
 }
 
 nav {
@@ -9,7 +10,8 @@ nav {
   padding-bottom: 5%;
 }
 
-.tumasHeader, .turmas {
+.tumasHeader,
+.turmas {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -17,7 +19,8 @@ nav {
   list-style: none;
 }
 
-.tumasHeader li, .turmas li {
+.tumasHeader li,
+.turmas li {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,16 +32,17 @@ nav {
 }
 
 .turmas li {
-  background-color: #1e5f9d; 
+  background-color: #1e5f9d;
   color: white;
   border-radius: 10px;
   box-shadow: 0px 3px 2px 0px #00000063;
   cursor: pointer;
 }
 
-.turmas li span, .tumasHeader li span {
+.turmas li span,
+.tumasHeader li span {
   flex: 1;
-  text-align: center; 
+  text-align: center;
 }
 
 .listaAlunos {
@@ -83,4 +87,72 @@ nav {
   display: flex;
   flex-direction: column;
   line-height: 16px;
+}
+
+.CadastrarTurma {
+  display: flex;
+  justify-content: right;
+}
+
+.CadastrarTurma button {
+  width: 25%;
+  font-size: 14px;
+  background: #1e5f9d;
+  color: aliceblue;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #303030;
+  box-shadow: 1px 1px 2px 1px #00000063;
+}
+
+.formCadastroTurma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-top: 5%;
+}
+
+.formCadastroTurma > input,
+.formCadastroTurma > select {
+  width: 50%;
+  height: 40px;
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.tabela {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  padding-left: 20px;
+}
+
+.tabela div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tabela p {
+  height: 40px;
+  margin: 0;
+  line-height: 40px;
+}
+
+.tabela select {
+  width: 40%;
+  height: 40px;
+  background: var(--Bluebackground);
+  color: #fff;
+  padding: 0 8px;
+  border: 1px solid rgba(0, 0, 0, 0.199);
+  cursor: pointer;
 }

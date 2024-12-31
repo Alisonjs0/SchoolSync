@@ -3,6 +3,7 @@
 import EsqueletoPrincipal from "@/app/.components/esqueleto";
 import PageTurmas from "@/app/.components/turmas/turmas";
 import DetalhesTurmas from "@/app/.components/turmas/detalhesTurma";
+import CadastrarTurma from "@/app/.components/turmas/cadastrarTurma";
 import InfoAluno from "@/app/.components/turmas/infoAluno";
 
 import "./turmas.css";
@@ -333,15 +334,17 @@ const Turmas = () => {
             {stage === "ListaTurmas" && <h3>Turmas</h3>}
             {stage === "DetalhesTurma" && <h3>Lista de Alunos</h3>}
             {stage === "InfoAluno" && <h3>Detalhes de Aluno</h3>}
+            {stage === "CadastrarTurma" && <h3>Cadastrar Turma</h3>}
 
             <div className="secaoTurmas">
               {stage === "ListaTurmas" && (
-                <PageTurmas setTurmaClicada={setTurmaClicada} turmas={turmas} />
+                <PageTurmas setTurmaClicada={setTurmaClicada} turmas={turmas} mudarPage={setStage}/>
               )}
               {stage === "DetalhesTurma" && (
                 <DetalhesTurmas turma={turmaClicada} voltar={setStage} setInfoAluno={setInfoAluno}/>
               )}
               {stage === "InfoAluno" && <InfoAluno infoAluno={infoAluno} voltar={setStage} setInfoAluno={setInfoAluno}/>}
+              {stage === "CadastrarTurma" && <CadastrarTurma voltar={setStage}/>}
             </div>
           </div>
         </EsqueletoPrincipal>
