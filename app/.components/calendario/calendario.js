@@ -118,7 +118,7 @@ const CalendarComponent = () => {
 
   const handleEventClick = (info) => {
     const clickedEvent = events.find((event) => event.id === info.event.id);
-    if (clickedEvent && user.tipo === "admin") {
+    if (clickedEvent && userData.cargo === "Admin") {
       setEventData({
         id: clickedEvent.id || "",
         title: clickedEvent.title || "",
@@ -326,7 +326,7 @@ const CalendarComponent = () => {
                 ></button>
               </div>
               <div className="modal-body text-center" id="delete-modal-body">
-                Tem certeza de que deseja excluir o evento: {eventData.title}?
+                Deseja excluir o evento: {eventData.title}?
               </div>
               <div className="modal-footer border-0">
                 <button
